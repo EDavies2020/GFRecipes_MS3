@@ -14,6 +14,31 @@
     <title>Document</title>
 </head>
 <body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper navbar teal darken-3">
+              <a href="#!" class="brand-logo">Gluten Free Kids</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+                <li><a href="#">My Account</a></li>
+                <li><a href="#">Log in</a></li>
+                <li><a href="#">Log out</a></li>
+                <li><a href="#">Register</a></li>
+              </ul>
+            </div>
+          </nav>
+        <!-- mobile nav bar -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><h4 class="center-align sidebar teal darken-3"><strong>GF Kids</strong></h4></li>
+            <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">Log in</a></li>
+            <li><a href="#">Log out</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </header>
     
     {% block content %}
     {% endblock %}
