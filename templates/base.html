@@ -25,18 +25,18 @@
                 <li><a href="#">My Account</a></li>
                 <li><a href="#">Log in</a></li>
                 <li><a href="#">Log out</a></li>
-                <li><a href="#">Register</a></li>
+                <li><a href="{{ url_for('register') }}">Register</a></li>
               </ul>
             </div>
           </nav>
         <!-- mobile nav bar -->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align sidebar teal darken-3"><strong>GF Kids</strong></h4></li>
-            <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#">My Account</a></li>
             <li><a href="#">Log in</a></li>
             <li><a href="#">Log out</a></li>
-            <li><a href="#">Register</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
         </ul>
     </header>
     
