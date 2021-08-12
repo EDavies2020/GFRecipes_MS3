@@ -15,6 +15,37 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
+                <i class="fas fa-question prefix teal-text text-darken-3"></"></i>
+                <select id="category" name="category" class="validate" required>
+                    <option value="" disabled selected>Sweet or Savoury?</option>
+                    <option value="1">Savoury</option>
+                    <option value="2">Sweet</option>
+                </select>
+                <label for="category">Category</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="far fa-chart-bar prefix teal-text text-darken-3"></"></i>
+                <select id="difficulty" name="difficulty" class="validate" required>
+                    <option value="" disabled selected>Choose difficulty level</option>
+                    <option value="1">Easy</option>
+                    <option value="2">Medium</option>
+                    <option value="2">Hard</option>
+                </select>
+                <label for="difficulty">Difficulty</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-sort-numeric-up-alt prefix teal-text text-darken-3"></i>
+                <input id="makes" name="makes" minlength="5" maxlength="50" 
+                    type="text" class="validate" required>
+                <label for="makes">How many does the recipe make?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
                 <i class="fas fa-user prefix teal-text text-darken-3"></i>
                 <input id="author" name="author" minlength="5" maxlength="50" 
                     type="text" class="validate" required>
@@ -23,10 +54,26 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
+                <i class="far fa-clock prefix teal-text text-darken-3"></i>
+                <input id="preptime" name="preptime" minlength="5" maxlength="50" 
+                    type="text" class="validate" required>
+                <label for="preptime">How long to prep? (in hrs and mins)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-temperature-high prefix teal-text text-darken-3"></"></i>
+                <input id="cooktime" name="cooktime" minlength="5" maxlength="50" 
+                    type="text" class="validate" required>
+                <label for="cooktime">How long to cook? (in hrs and mins)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
                 <i class="fas fa-seedling prefix teal-text text-darken-3"></i>
                 <textarea id="ingredients" name="ingredients" minlength="5" maxlength="600"
                     class="materialize-textarea validate" required></textarea>
-                <label for="ingredients">Ingredients</label>
+                <label for="ingredients">Ingredients (seperate ingredients with / ie. 500g GF flour/ 2 eggs.. )</label>
             </div>
         </div>
         <div class="row">
