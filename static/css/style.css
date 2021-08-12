@@ -23,3 +23,19 @@ body {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+.card {
+    margin-top: 20px;
+    line-height: 30px;
+}
+.prep i {
+    padding-right: 15px;
+}
+.cooking i {
+    padding-right: 15px;
+}
+.ingredients i {
+    padding-right: 15px;
+}
+.method i {
+    padding-right: 15px;
+}

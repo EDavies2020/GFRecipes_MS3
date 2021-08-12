@@ -10,19 +10,21 @@
       </div>
       <div class="card-content">
         <span class="card-title activator red-text text-darken-4">{{ recipe.recipe_name }}<i
-            class="material-icons right">more</i></span>
-            <p class="category">{{ recipe.category_name }}</p>
-            <p class="difficulty">{{ recipe.difficulty }}</p>
-            <p class="makes">{{ recipe.makes }}</p>
-            <p class="author">{{ recipe.by }}</p>
+            class="fas fa-chevron-circle-down fa-lg right tooltipped" data-position="right"
+            data-tooltip="click for recipe"></i></span>
+        <p class="category">{{ recipe.category_name }}</p>
+        <p class="difficulty">Difficulty: {{ recipe.difficulty }}</p>
+        <p class="makes">Makes: {{ recipe.makes }}</p>
+        <p class="author">By: {{ recipe.by }}</p>
       </div>
       <div class="card-reveal">
-        <span class="card-title red-text text-darken-4">{{ recipe.recipe_name }}<i class="fas fa-times right"></i></span>
-        <p class="prep">Prep Time: {{ recipe.prep_time }} </p>
-        <p class="cooking">Cooking Time: {{ recipe.cooking_time }}</p>
-        <h5 class="ingredients">Ingredients:</h5>
+        <span class="card-title red-text text-darken-4">{{ recipe.recipe_name }}<i
+            class="fas fa-times right"></i></span>
+        <p class="prep"><i class="far fa-clock fa-lg"></i> Prep Time: {{ recipe.prep_time }} </p>
+        <p class="cooking"><i class="fas fa-temperature-high fa-lg"></i> Cooking Time: {{ recipe.cooking_time }}</p>
+        <h5 class="ingredients"><i class="fas fa-seedling"></i> Ingredients:</h5>
         <p class="ingredients-text">{{ recipe.ingredients }}</p>
-        <h5 class="method">Method:</h5>
+        <h5 class="method"><i class="fas fa-list-ol"></i> Method:</h5>
         <p class="method-text">{{ recipe.method }}</p>
       </div>
     </div>
