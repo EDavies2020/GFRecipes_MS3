@@ -3,72 +3,41 @@
 
 <h3 class="teal-text text-darken-3 center-align">Add Recipe</h3>
 
-    <div class="row">
-        <form class="col s12" method="POST" action="">
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix teal-text text-darken-3"></i>
-                    <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" type="text" class="validate">
-                    <label for="recipe_name">Recipe Name</label>
-                </div>
+<div class="row card-panel">
+    <form class="col s12" method="POST" action="">
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-pencil-alt prefix teal-text text-darken-3"></i>
+                <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" 
+                    type="text" class="validate" required>
+                <label for="recipe_name">Recipe Name</label>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-question prefix teal-text text-darken-3"></i>
-                    <input id="category" name="category" type="text" class="validate">
-                    <label for="category">Category</label>
-                </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-user prefix teal-text text-darken-3"></i>
+                <input id="author" name="author" minlength="5" maxlength="50" 
+                    type="text" class="validate" required>
+                <label for="author">Author</label>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="far fa-chart-bar prefix teal-text text-darken-3"></i>
-                    <input id="difficulty" name="difficulty" type="text" class="validate">
-                    <label for="difficulty">Difficulty</label>
-                </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-seedling prefix teal-text text-darken-3"></i>
+                <textarea id="ingredients" name="ingredients" minlength="5" maxlength="600"
+                    class="materialize-textarea validate" required></textarea>
+                <label for="ingredients">Ingredients</label>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-sort-numeric-up-alt prefix teal-text text-darken-3"></i>
-                    <input id="makes" name="makes" type="text" class="validate">
-                    <label for="makes">Makes</label>
-                </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="fas fa-list-ol prefix teal-text text-darken-3"></i>
+                <textarea id="method" name="method" minlength="5" maxlength="600"
+                    class="materialize-textarea validate" required></textarea>
+                <label for="method">Method</label>
             </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-user prefix teal-text text-darken-3"></i>
-                    <input id="author" name="author" minlength="5" maxlength="50" type="text" class="validate">
-                    <label for="author">Author</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="far fa-clock prefix teal-text text-darken-3"></i>
-                    <input id="preptime" name="preptime" type="text" class="validate">
-                    <label for="preptime">Prep time</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-temperature-high prefix teal-text text-darken-3"></i>
-                    <input id="cooktime" name="cooktime" type="text" class="validate">
-                    <label for="cooktime">Cooking time</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-seedling prefix teal-text text-darken-3"></i>
-                    <input id="ingredients" name="ingredients" minlength="30" maxlength="600" type="text" class="validate">
-                    <label for="ingredients">Ingredients</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-list-ol prefix teal-text text-darken-3"></i>
-                    <input id="method" name="method" minlength="30" maxlength="600" type="text" class="validate">
-                    <label for="method">Method</label>
-                </div>
-            </div>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}
