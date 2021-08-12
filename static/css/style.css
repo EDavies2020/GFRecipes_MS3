@@ -1,14 +1,14 @@
 body {
-    background-color: rgb(159, 209, 184);
+    background-color: rgb(200, 224, 211);
 }
 .navbar {
     text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-    border-bottom: 2px solid #FA6E00;
+    border-bottom: 3px solid #FA6E00;
 }
 .sidebar {
     color: white;
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    border-bottom: 2px solid #FA6E00;
+    border-bottom: 3px solid #FA6E00;
 }
 .logo {
     height: 60px;
