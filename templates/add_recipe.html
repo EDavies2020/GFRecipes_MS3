@@ -3,8 +3,9 @@
 
 <h3 class="teal-text text-darken-3 center-align">Add Recipe</h3>
 
+<!-- add recipe form -->
 <div class="row card-panel">
-    <form class="col s12" method="POST" action="">
+    <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix teal-text text-darken-3"></i>
@@ -13,6 +14,7 @@
                 <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
+        <!-- add category -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-question prefix teal-text text-darken-3"></"></i>
@@ -25,50 +27,56 @@
                 <label for="category_name">Category</label>
             </div>
         </div>
+        <!-- add difficulty -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="far fa-chart-bar prefix teal-text text-darken-3"></"></i>
-                <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
+                <select id="difficulty" name="difficulty" class="validate" required>
                     <option value="" disabled selected>How difficult is your recipe?</option>
                     {% for difficulty in level %}
                         <option value="{{ difficulty.recipe_difficulty }}">{{ difficulty.recipe_difficulty }}</option>
                     {% endfor %}
                 </select>
-                <label for="recipe_difficulty">Difficulty</label>
+                <label for="difficulty">Difficulty</label>
             </div>
         </div>
+        <!-- add how many recipes makes -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-sort-numeric-up-alt prefix teal-text text-darken-3"></i>
-                <input id="makes" name="makes" minlength="5" maxlength="50" 
+                <input id="makes" name="makes" minlength="1" maxlength="2" 
                     type="text" class="validate" required>
                 <label for="makes">How many does the recipe make?</label>
             </div>
         </div>
+        <!-- add author -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-user prefix teal-text text-darken-3"></i>
-                <input id="author" name="author" minlength="5" maxlength="50" 
+                <input id="by" name="by" minlength="5" maxlength="50" 
                     type="text" class="validate" required>
-                <label for="author">Author</label>
+                <label for="by">Author</label>
             </div>
         </div>
+        <!-- add prep time -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="far fa-clock prefix teal-text text-darken-3"></i>
-                <input id="preptime" name="preptime" minlength="5" maxlength="50" 
+                <input id="prep_time" name="prep_time" minlength="5" maxlength="50" 
                     type="text" class="validate" required>
-                <label for="preptime">How long to prep? (in hrs and mins)</label>
+                <label for="prep_time">How long to prep? (in hrs and mins)</label>
             </div>
         </div>
+        <!-- add cooking time -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-temperature-high prefix teal-text text-darken-3"></"></i>
-                <input id="cooktime" name="cooktime" minlength="5" maxlength="50" 
+                <input id="cooking_time" name="cooking_time" minlength="5" maxlength="50" 
                     type="text" class="validate" required>
-                <label for="cooktime">How long to cook? (in hrs and mins)</label>
+                <label for="cooking_time">How long to cook? (in hrs and mins)</label>
             </div>
         </div>
+        <!-- add ingredients -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-seedling prefix teal-text text-darken-3"></i>
@@ -77,12 +85,28 @@
                 <label for="ingredients">Ingredients (seperate ingredients with / ie. 500g GF flour/ 2 eggs.. )</label>
             </div>
         </div>
+        <!-- add method -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-list-ol prefix teal-text text-darken-3"></i>
-                <textarea id="method" name="method" minlength="5" maxlength="600"
+                <textarea id="method" name="method" minlength="5" maxlength="2000"
                     class="materialize-textarea validate" required></textarea>
                 <label for="method">Method</label>
+            </div>
+        </div>
+        <!-- add image -->
+        <div class="row">
+            <div class="input-field col s12">
+                <i class= "fas fa-link prefix teal-text text-darken-3"></i>
+                <input value="https://" id="image" name= "image" minlength="20" type="text" class="validate" required>
+                <label class="active" for="image">Recipe image link</label>
+            </div>
+        </div>
+        <!-- submit button -->
+        <div class="row">
+            <div class="col s12 center-align">
+                <button class="btn-large teal-text text-darken-3" type="submit">
+                    <i class="fas fa-scroll left teal-text text-darken-3"></i>Add Recipe</button>
             </div>
         </div>
     </form>
