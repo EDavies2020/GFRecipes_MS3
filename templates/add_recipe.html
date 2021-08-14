@@ -17,7 +17,7 @@
         <!-- add category -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-question prefix teal-text text-darken-3"></"></i>
+                <i class="fas fa-question prefix teal-text text-darken-3"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled selected>Sweet or Savoury?</option>
                     {% for category in categories %}
@@ -30,14 +30,14 @@
         <!-- add difficulty -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="far fa-chart-bar prefix teal-text text-darken-3"></"></i>
-                <select id="difficulty" name="difficulty" class="validate" required>
+                <i class="far fa-chart-bar prefix teal-text text-darken-3"></i>
+                <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
                     <option value="" disabled selected>How difficult is your recipe?</option>
-                    {% for difficulty in level %}
-                        <option value="{{ difficulty.recipe_difficulty }}">{{ difficulty.recipe_difficulty }}</option>
+                    {% for levels in level %}
+                        <option value="{{ levels.recipe_difficulty }}">{{ levels.recipe_difficulty }}</option>
                     {% endfor %}
                 </select>
-                <label for="difficulty">Difficulty</label>
+                <label for="recipe_difficulty">Difficulty</label>
             </div>
         </div>
         <!-- add how many recipes makes -->
@@ -70,7 +70,7 @@
         <!-- add cooking time -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-temperature-high prefix teal-text text-darken-3"></"></i>
+                <i class="fas fa-temperature-high prefix teal-text text-darken-3"></i>
                 <input id="cooking_time" name="cooking_time" minlength="5" maxlength="50" 
                     type="text" class="validate" required>
                 <label for="cooking_time">How long to cook? (in hrs and mins)</label>

@@ -104,7 +104,7 @@ def add_recipe():
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
             "by": request.form.get("by"),
-            "difficulty": request.form.get("difficultys"),
+            "recipe_difficulty": request.form.get("recipe_difficulty"),
             "makes": request.form.get("makes"),
             "prep_time": request.form.get("prep_time"),
             "cooking_time": request.form.get("cooking_time"),
@@ -119,16 +119,6 @@ def add_recipe():
     categories = mongo.db.categories.find().sort("category_name", 1)
     level = mongo.db.level.find().sort("recipe_difficulty", 1)
     return render_template("add_recipe.html", categories=categories, level=level)
-
-
-@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
-def edit_recipe(recipe_id):
-    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
-    categories = mongo.db.categories.find().sort("category_name", 1)
-    level = mongo.db.level.find().sort("recipe_difficulty", 1)
-    return render_template(
-        "edit_recipe.html", recipe=recipe, categories=categories,
-        level=level)
     
 
 if __name__ == "__main__":
