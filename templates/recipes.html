@@ -19,7 +19,7 @@
         <p class="difficulty">Difficulty: {{ recipe.difficulty }}</p>
         <p class="makes">Makes: {{ recipe.makes }}</p>
         <p class="author">By: {{ recipe.by }}</p>
-        <a href="" class="btn-edit btn-floating btn-small yellow darken-2"><i class="fas fa-edit tooltipped" data-position="bottom"
+        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-edit btn-floating btn-small yellow darken-2"><i class="fas fa-edit tooltipped" data-position="bottom"
           data-tooltip="Edit Recipe""></i></a>
         <a href="" class="btn-delete btn-floating btn-small red darken-4"><i class="far fa-trash-alt tooltipped" data-position="bottom"
           data-tooltip="Delete Recipe""></i></a>
