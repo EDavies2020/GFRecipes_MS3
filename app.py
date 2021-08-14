@@ -115,18 +115,17 @@ def add_recipe():
         mongo.db.recipes.insert_one(recipe)
         flash("Your recipe has been added!")
         return redirect(url_for("get_recipes"))
-
     categories = mongo.db.categories.find().sort("category_name", 1)
-    level = mongo.db.level.find().sort("recipe_difficulty", 1)
-    return render_template("add_recipe.html", categories=categories, level=level)
+    levels = mongo.db.levels.find().sort("recipe_difficulty", 1)
+    return render_template("add_recipe.html", categories=categories, levels=levels)
     
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
-    level = mongo.db.level.find().sort("recipe_difficulty", 1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories, level=level)
+    levels = mongo.db.levels.find().sort("recipe_difficulty", 1)
+    return render_template("edit_recipe.html", recipe=recipe, categories=categories, levels=levels)
 
 
 if __name__ == "__main__":
