@@ -119,7 +119,7 @@ def add_recipe():
     categories = mongo.db.categories.find().sort("category_name", 1)
     level = mongo.db.level.find().sort("recipe_difficulty", 1)
     return render_template("add_recipe.html", categories=categories, level=level)
-    
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

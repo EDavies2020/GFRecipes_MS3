@@ -39,3 +39,6 @@ body {
 .method i {
     padding-right: 15px;
 }
+.btn-floating {
+    margin: 10px 10px;
+}
