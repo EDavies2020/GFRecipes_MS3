@@ -5,41 +5,53 @@
 
 <div class="row">
     {% for recipe in recipes %}
+    {% if session.user|lower == recipe.created_by|lower %}
     <div class="col s12 m6 l4">
-      <div class="card">
-        <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{ recipe.image }}" alt="recipe_image">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="{{ recipe.image }}" alt="recipe_image">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator blue-text text-light-blue darken-4"><i
+                        class="fas fa-chevron-circle-down fa-lg right tooltipped" data-position="right"
+                        data-tooltip="click for recipe"></i></span>
+                <h5 class="name red-text text-darken-4">{{ recipe.recipe_name }}</h5>
+                <p class="category">{{ recipe.category_name }}</p>
+                <p class="level">Difficulty: {{ recipe.recipe_difficulty }}</p>
+                <p class="makes">Makes: {{ recipe.makes }}</p>
+                <p class="by">By: {{ recipe.by }}</p>
+                {% if session.user|lower == recipe.created_by|lower %}
+                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+                    class="btn-edit btn-floating btn-small yellow darken-2">
+                    <i class="fas fa-edit tooltipped" data-position="bottom" data-tooltip="Edit Recipe""></i></a>
+                    <a href=" {{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                        class="btn-delete btn-floating btn-small red darken-4">
+                        <i class="far fa-trash-alt"></i></a>
+                {% endif %}
+            </div>
+            <div class="card-reveal">
+                <span class="card-title blue-text text-light-blue darken-4"><i class="fas fa-times right"></i></span>
+                <h5 class="name red-text text-darken-4">{{ recipe.recipe_name }}</h5>
+                <p class="prep"><i class="far fa-clock fa-lg"></i> Prep Time: {{ recipe.prep_time }} </p>
+                <p class="cooking"><i class="fas fa-temperature-high fa-lg">
+                    </i> Cooking Time: {{ recipe.cooking_time }}</p>
+                <h5 class="ingredients"><i class="fas fa-seedling"></i> Ingredients:</h5>
+                <p class="ingredients-text">{{ recipe.ingredients }}</p>
+                <h5 class="method"><i class="fas fa-list-ol"></i> Method:</h5>
+                <p class="method-text">{{ recipe.method }}</p>
+            </div>
         </div>
-        <div class="card-content">
-          <span class="card-title activator blue-text text-light-blue darken-4"><i
-              class="fas fa-chevron-circle-down fa-lg right tooltipped" data-position="right"
-              data-tooltip="click for recipe"></i></span>
-          <h5 class="name red-text text-darken-4">{{ recipe.recipe_name }}</h5>
-          <p class="category">{{ recipe.category_name }}</p>
-          <p class="level">Difficulty: {{ recipe.recipe_difficulty }}</p>
-          <p class="makes">Makes: {{ recipe.makes }}</p>
-          <p class="by">By: {{ recipe.by }}</p>
-          {% if session.user|lower == recipe.created_by|lower %}
-            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-edit btn-floating btn-small yellow darken-2">
-              <i class="fas fa-edit tooltipped" data-position="bottom" data-tooltip="Edit Recipe""></i></a>
-            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-delete btn-floating btn-small red darken-4">
-              <i class="far fa-trash-alt"></i></a>
-          {% endif %}
-        </div>
-        <div class="card-reveal">
-          <span class="card-title blue-text text-light-blue darken-4"><i
-              class="fas fa-times right"></i></span>
-          <h5 class="name red-text text-darken-4">{{ recipe.recipe_name }}</h5>
-          <p class="prep"><i class="far fa-clock fa-lg"></i> Prep Time: {{ recipe.prep_time }} </p>
-          <p class="cooking"><i class="fas fa-temperature-high fa-lg"></i> Cooking Time: {{ recipe.cooking_time }}</p>
-          <h5 class="ingredients"><i class="fas fa-seedling"></i> Ingredients:</h5>
-          <p class="ingredients-text">{{ recipe.ingredients }}</p>
-          <h5 class="method"><i class="fas fa-list-ol"></i> Method:</h5>
-          <p class="method-text">{{ recipe.method }}</p>
-        </div>
-      </div>
     </div>
+    {% endif %}
     {% endfor %}
-  </div>
+    <!-- submit button -->
+    <div class="row">
+        <div class="col s12 center-align">
+            <a href="{{ url_for('add_recipe') }}" class="btn-large teal-text text-darken-3">
+                <i class="fas fa-scroll left teal-text text-darken-3"></i>Add Recipe
+            </a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

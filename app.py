@@ -114,7 +114,7 @@ def add_recipe():
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Your recipe has been added!")
-        return redirect(url_for("get_recipes"))
+        return redirect(url_for("my_muffins"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     levels = mongo.db.levels.find().sort("recipe_difficulty", 1)
