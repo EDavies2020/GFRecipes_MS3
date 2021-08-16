@@ -111,10 +111,11 @@ def add_recipe():
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "image": request.form.get("image"),
+            "created_by": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Your recipe has been added!")
-        return redirect(url_for("my_muffins"))
+        return redirect(url_for("my_recipes"))
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     levels = mongo.db.levels.find().sort("recipe_difficulty", 1)
@@ -135,14 +136,17 @@ def edit_recipe(recipe_id):
             "ingredients": request.form.get("ingredients"),
             "method": request.form.get("method"),
             "image": request.form.get("image"),
+            "created_by": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
-        flash("Your recipe has been updated!")
+        flash("Your recipe has been updated")
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
     levels = mongo.db.levels.find().sort("recipe_difficulty", 1)
-    return render_template("edit_recipe.html", recipe=recipe, categories=categories, levels=levels)
+    return render_template(
+        "edit_recipe.html", recipe=recipe, categories=categories, 
+        levels=levels)
 
 
 @app.route("/delete_recipe/<recipe_id>")
