@@ -1,7 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="teal-text text-darken-3 center-align">All Recipes</h3>
+
+
+<div class="row center-align welcome-section">
+  <div class="col s12">
+    <h3 class="welcome-header teal-text text-darken-3 center-align">Welcome to Gluten Free Kids!</h3>
+    <p class="welcome-text center-align">Get fed up trying to work out what to cook for the little people in your household?</p>
+    <p class="welcome-text center-align">Have the added challenge of having a child that cannot eat gluten?</p>
+    <p class="welcome-text center-align">This site has been created for parents of children who are gluten free to share recipes 
+      that their little angels enjoy</p>
+    <p class="welcome-text center-align">Want to share your tasty recipes?</p>
+    <p class="reg-here">
+        <a href="{{ url_for('register') }}">click here</a> to register and share your recipes</a>
+    </p>
+  </div>
+</div>
 
 <div class="row">
   {% for recipe in recipes %}
@@ -40,6 +54,12 @@
     </div>
   </div>
   {% endfor %}
+  <div class="col s12 center-align">
+    <div class="add-button btn-large green darken-2">
+        <a href="{{ url_for('add_recipe') }}"><i class="fas fa-scroll left green darken-2">
+        </i>Add Recipe</a>
+    </div>
+  </div>
 </div>
 
 {% endblock %}

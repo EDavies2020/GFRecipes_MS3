@@ -16,13 +16,20 @@ body {
     padding-top: 2px;
     padding-bottom: 6px;
 }
-.button-text {
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+/* recipes page */
+/* welcome introduction */
+.welcome-section {
+    background-color: #fafafa;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
-.message {
-    padding-top: 5px;
-    padding-bottom: 5px;
+.welcome-header {
+    margin-top: 20px;
 }
+.reg-here a {
+    margin-bottom: 50px
+}
+/* recipe cards */
 .card {
     margin-top: 20px;
     line-height: 30px;
@@ -41,4 +48,8 @@ body {
 }
 .btn-floating {
     margin: 10px 10px;
+}
+/* add recipe button */
+.add-button a {
+    color: white;
 }
