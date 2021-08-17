@@ -1,22 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-
-<div class="row center-align welcome-section">
-  <div class="col s12">
-    <h3 class="welcome-header teal-text text-darken-3 center-align">Welcome to Gluten Free Kids!</h3>
-    <p class="welcome-text center-align">Get fed up trying to work out what to cook for the little people in your household?</p>
-    <p class="welcome-text center-align">Have the added challenge of having a child that cannot eat gluten?</p>
-    <p class="welcome-text center-align">This site has been created for parents of children who are gluten free to share recipes 
-      that their little angels enjoy</p>
-    <p class="welcome-text center-align">Want to share your tasty recipes?</p>
-    <p class="reg-here">
-        <a href="{{ url_for('register') }}">click here</a> to register and share your recipes</a>
-    </p>
+<div class="row welcome-section"></div>
+  <div class="col s12 center-align">
+    <div class="carousel carousel-slider" id="carousel-auto">
+        <a class="carousel-item" href="#one!"><img src="../static/images/gfreek (7).jpg"></a>
+        <a class="carousel-item" href="#two!"><img src="../static/images/gfreek (6).jpg"</a>
+        <a class="carousel-item" href="#three!"><img src="../static/images/gfreek (5).jpg"></a>
+        <a class="carousel-item" href="#four!"><img src="../static/images/gfreek (4).jpg"></a>
+        <a class="carousel-item" href="#five!"><img src="../static/images/gfreek (3).jpg"></a>
+        <a class="carousel-item" href="#six!"><img src="../static/images/gfreek (9).jpg"></a>
+    </div>
+    <h3 class="welcome-header teal-text text-darken-3 center-align"><strong>Welcome to Gluten Free Kids!</strong></h3>
+    <h6 class="welcome-text">Fed up trying to work out what to cook for the little people in your household?</h6>
+    <h6 class="welcome-text">Have the added challenge of having a child that cannot eat gluten?</h6>
+    <h6 class="welcome-text">This site has been created for parents of children who are gluten free to share
+      recipes their little angels enjoy</h6>
+    <h6 class="welcome-text">Want to share your tasty recipes?</h6>
+    <div class="reg-button btn-large green darken-2">
+      <a href="{{ url_for('register') }}"><i class="fas fa-scroll left green darken-2">
+        </i>click here to register and share your recipes</a>
+    </div>
   </div>
 </div>
-
 <div class="row">
   {% for recipe in recipes %}
   <div class="col s12 m6 l4">
@@ -34,15 +40,16 @@
         <p class="makes">Makes: {{ recipe.makes }}</p>
         <p class="by">By: {{ recipe.by }}</p>
         {% if session.user|lower == recipe.created_by|lower %}
-          <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-edit btn-floating btn-small yellow darken-2">
-            <i class="fas fa-edit tooltipped" data-position="bottom" data-tooltip="Edit Recipe""></i></a>
-          <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn-delete btn-floating btn-small red darken-4">
+        <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
+          class="btn-edit btn-floating btn-small yellow darken-2">
+          <i class="fas fa-edit tooltipped" data-position="bottom" data-tooltip="Edit Recipe""></i></a>
+          <a href=" {{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+            class="btn-delete btn-floating btn-small red darken-4">
             <i class="far fa-trash-alt"></i></a>
         {% endif %}
       </div>
       <div class="card-reveal">
-        <span class="card-title blue-text text-light-blue darken-4"><i
-            class="fas fa-times right"></i></span>
+        <span class="card-title blue-text text-light-blue darken-4"><i class="fas fa-times right"></i></span>
         <h5 class="name red-text text-darken-4">{{ recipe.recipe_name }}</h5>
         <p class="prep"><i class="far fa-clock fa-lg"></i> Prep Time: {{ recipe.prep_time }} </p>
         <p class="cooking"><i class="fas fa-temperature-high fa-lg"></i> Cooking Time: {{ recipe.cooking_time }}</p>
@@ -56,7 +63,7 @@
   {% endfor %}
   <div class="col s12 center-align">
     <div class="add-button btn-large green darken-2">
-        <a href="{{ url_for('add_recipe') }}"><i class="fas fa-scroll left green darken-2">
+      <a href="{{ url_for('add_recipe') }}"><i class="fas fa-scroll left green darken-2">
         </i>Add Recipe</a>
     </div>
   </div>
