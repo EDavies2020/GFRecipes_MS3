@@ -33,7 +33,7 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username already exists")
+            flash("Username/Password already exists")
             return redirect(url_for("register"))
 
         register = {
@@ -66,12 +66,12 @@ def login():
                         "account", username=session["user"]))
             else:
                 # invalid password match
-                flash("Incorrect Username and/or Password")
+                flash("Incorrect Username/Password")
                 return redirect(url_for("login"))
 
         else:
             # username doesn't exist
-            flash("Incorrect Username and/or Password")
+            flash("Incorrect Username/Password")
             return redirect(url_for("login"))
 
     return render_template("login.html")
@@ -94,7 +94,7 @@ def logout():
     # remove user from session
     flash("You have been logged out, see you again soon!")
     session.pop("user")
-    return redirect(url_for("login"))
+    return redirect(url_for("get_recipes"))
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])
