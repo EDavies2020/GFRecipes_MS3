@@ -19,7 +19,7 @@ body {
 /* recipes page */
 /* carousel */
 #carousel-auto {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 .welcome-header {
     margin-bottom: 20px;
@@ -60,12 +60,12 @@ body {
 .add-button a {
     color: white;
 }
-/* register page */
-.reg-intro {
-    margin-top: 40px;
+/* register page/Log in page */
+.login-intro {
+    margin-top: 60px;
     margin-bottom: 20px;
 }
-.reg-button {
+.login-button {
     margin-top: 0px;
     margin-bottom: 20px;
 }
