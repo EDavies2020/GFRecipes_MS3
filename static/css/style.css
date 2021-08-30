@@ -74,9 +74,37 @@ body {
 }
 /* My account page */
 .account-page {
-    margin-top: 100px;
+    margin-top: 80px;
 }
 .account-page img {
     float: left;
-    height: 300px;
+    height: 250px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-radius: 50%;
+}
+.account-page-intro h6 {
+    line-height: 30px;
+}
+#account-page-link-card {
+    margin-top: 60px;
+}
+#account-add h5 {
+    text-align: center;
+    margin-top: 100px;
+    line-height: 40px;
+}
+#account-add h5 a:hover {
+    text-decoration: underline;
+}
+/* add recipes page */
+#add-recipe-image-top {
+    margin-bottom: 20px;
+}
+.add-recipe-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+#add-recipe-image-bottom {
+    margin-top: 20px;
 }

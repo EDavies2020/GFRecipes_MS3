@@ -3,11 +3,45 @@
 
 
 <div class="row">
-    <div class="col s12 m10 offset-m2">
+    <div class="col s12 m10">
         <div class="account-page">
-            <img src="../static/images/welcome.png" alt="welcome">
-            <h3 class="center-align red-text text-darken-4">Hello {{ username }}!</h3>
+            <img src="../static/images/hello.jpg" alt="welcome">
+            <h3 class="center-align red-text text-darken-4">{{ username }}!</h3>
             <h4 class="center-align teal-text text-darken-4">Welcome to your Gluten Free Kids account</h4>
+        </div>
+    </div>
+    <div class="col s12">
+        <div class="account-page-intro">
+            <h6 class="center-align"><b>From your account you can add, edit and delete the recipes you share with the Gluten Free Kids community.</b></h6>
+            <h6 class="center-align">We would love for you to share any recipes you find that kids that are gluten free would enjoy</h6>
+            <h6 class="center-align">OR if you have any recipes that gluten free kids and their siblings who may not be gluten free also enjoy then even better</h6>
+            <h6 class="center-align">You can share your own recipes or recipes you have found online, they just need to be child friendly and most importantly.. YUMMY!!!</h6>
+        </div>
+    </div>
+</div>
+<div class="col s12" id="account-page-link-card">
+    <div class="card horizontal">
+        <div class="card-image">
+            <img src="../static/images/cooking.jpg">
+        </div>
+        <div class="card-stacked">
+            <div class="card-content red-text darken-4" id="account-add">
+                <h5><b>To share your tasty Gluten Free Recipe..</b><br>
+                <a href="{{ url_for('add_recipe') }}">Click Here</a></h5>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col s12" id="account-page-link-card">
+    <div class="card horizontal" id="account-page-link-card">
+        <div class="card-stacked">
+            <div class="card-content red-text darken-4" id="account-add">
+                <h5><b>Want to View, Amend or Delete your Recipes?</b><br>
+                <a href="{{ url_for('my_recipes') }}">Click Here</a></h5>
+            </div>
+        </div>
+        <div class="card-image">
+            <img src="../static/images/gfreek (13).jpg">
         </div>
     </div>
 </div>

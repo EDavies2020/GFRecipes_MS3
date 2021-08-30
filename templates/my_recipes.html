@@ -33,7 +33,7 @@
                         <p>Are you sure you want to delete your recipe?</p>
                     </div>
                     <div class="modal-footer">
-                        <a href="{{ url_for('get_recipes') }}" class="btn-small yellow darken-2">No - Keep this
+                        <a href="{{ url_for('my_recipes') }}" class="btn-small yellow darken-2">No - Keep this
                             Recipe</a>
                         <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
                             class="btn-delete btn-small red darken-4">Yes - Delete Recipe</a>
