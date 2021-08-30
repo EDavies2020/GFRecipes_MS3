@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h5 class="login-intro red-text text-darken-4 center-align"><b>Welcome back to your Gluten Free Kids Account!</b></h5>
-<h6 class="login-intro center-align">Sign in to your account below</h6>
 <div class="row">
     <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
         <div class="card-panel">
             <!-- username -->
+            <h5 class="login-intro red-text text-darken-4 center-align"><b>Welcome back to your Gluten Free Kids Account!</b></h5>
+            <p class="login-intro center-align">Sign in to your account below</p>
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-cog prefix green-text text-green darken-2"></i>

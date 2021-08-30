@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
-<section class="container-fluid login-back">
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
             <div class="card-panel">
                 <h5 class="login-intro red-text text-darken-4 center-align"><b>Share your yummy recipes with the Gluten free kids
                     community</b></h5>
-                <h6 class="login-intro center-align">Register for your account below</h6>
+                <p class="login-intro center-align">Register for your account below</p>
                 <!-- username -->
                 <div class="row">
                     <div class="input-field col s12">
@@ -37,6 +36,5 @@
             </div>
         </form>
     </div>
-</section>
 
 {% endblock %}

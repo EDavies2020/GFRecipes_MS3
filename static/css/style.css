@@ -61,6 +61,9 @@ body {
     color: white;
 }
 /* register page/Log in page */
+.card-panel {
+    margin-top: 40px;
+}
 .login-intro {
     margin-top: 30px;
     margin-bottom: 20px;
@@ -68,4 +71,12 @@ body {
 .login-button {
     margin-top: 0px;
     margin-bottom: 20px;
+}
+/* My account page */
+.account-page {
+    margin-top: 100px;
+}
+.account-page img {
+    float: left;
+    height: 300px;
 }

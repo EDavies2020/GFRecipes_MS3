@@ -7,5 +7,6 @@ $(document).ready(function () {
     $('#carousel-auto').carousel(
       'next');
   }, 3000);
+  $('.modal').modal();
 });
 
