@@ -113,11 +113,14 @@ body {
 #account-delete {
     margin-top: 50px;
 }
-#account-delete h5 {
-    color: red;
+#account-delete h6 {
+    color: orange;
 }
 #account-delete p {
     font-size: small;
+}
+#account-delete a:hover {
+    text-decoration: underline;
 }
 /* add recipes page */
 .add-recipe-title {
