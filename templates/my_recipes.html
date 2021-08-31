@@ -1,7 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-<h3 class="teal-text text-darken-3 center-align">My Recipes</h3>
+<div class="row center-align">
+    <div class="col s12 my-recipes-title">
+        <h3><b>My Recipes</b></h3>
+    </div>
+</div>
 
 <div class="row">
     {% for recipe in recipes %}

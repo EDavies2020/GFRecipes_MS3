@@ -6,7 +6,7 @@ $(document).ready(function () {
   setInterval(function () {
     $('#carousel-auto').carousel(
       'next');
-  }, 3000);
+  }, 2000);
   $('.modal').modal();
 });
 

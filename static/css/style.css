@@ -98,16 +98,6 @@ body {
     text-decoration: underline;
 }
 /* add recipes page */
-/* #add-recipe-image-top {
-    margin-top: 20px;
-    height: 150px;
-    width: 100%;
-} */
-/* .add-recipe-title {
-    
-    text-align: center;
-    margin-bottom: 10px;
-} */
 .add-recipe-title {
     background-image: url(/static/images/recipetop.jpg);
     height: 200px;
@@ -128,3 +118,39 @@ body {
 #add-recipe-image-bottom {
     margin-top: 20px;
 }
+/* my recipes page */
+.my-recipes-title {
+    background-image: url(/static/images/gfreek14.jpg);
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 20px;
+}
+.my-recipes-title h3 {
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+/* edit recipes page */
+.edit-recipe-title {
+    background-image: url(/static/images/gfreek3.jpg);
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-top: 20px;
+}
+.edit-recipe-title h3 {
+    text-align: center;
+    position: absolute;
+    top: 68%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: green;
+  }
