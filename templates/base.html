@@ -10,45 +10,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles %}
     {% endblock %}
     <title>Document</title>
 </head>
 <body>
-
+    <!-- navbar -->
     <header>
         <nav>
             <div class="nav-wrapper navbar teal darken-3">
-              <a href="{{ url_for('get_recipes') }}" class="brand-logo"><img class="logo" src="../static/images/logo_large.png" alt="logo"></a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-              <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
-                {% if session.user %}
+                <a href="{{ url_for('get_recipes') }}" class="brand-logo"><img class="logo"
+                        src="../static/images/logo_large.png" alt="logo"></a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+                    {% if session.user %}
                     <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
                     <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                     <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
                     <li><a href="{{ url_for('logout') }}">Log out</a></li>
-                {% else %}
+                    {% else %}
                     <li><a href="{{ url_for('login') }}">Log in</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
-                {% endif %}
-              </ul>
+                    {% endif %}
+                </ul>
             </div>
-          </nav>
+        </nav>
         <!-- mobile nav bar -->
         <ul class="sidenav" id="mobile-demo">
-            <li><h4 class="center-align sidebar teal darken-3"><strong>GF Kids</strong></h4></li>
+            <li>
+                <h4 class="center-align sidebar teal darken-3"><strong>GF Kids</strong></h4>
+            </li>
             <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
             {% if session.user %}
-                <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
-                <li><a href="{{ url_for('logout') }}">Log out</a></li>
-                <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
-                <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
+            <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
+            <li><a href="{{ url_for('logout') }}">Log out</a></li>
+            <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
+            <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
             {% else %}
-                <li><a href="{{ url_for('login') }}">Log in</a></li>
-                <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Log in</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>
     </header>
@@ -64,28 +68,30 @@
         {% endif %}
         {% endwith %}
     </section>
+    <!-- main section -->
     <main class="container">
         {% block content %}
         {% endblock %}
     </main>
-
+    <!-- footer -->
     <footer class="page-footer teal darken-4">
-          <div class="footer-row">
+        <div class="footer-row">
             <div class="col s12 center-align">
-                <a href="{{ url_for('get_recipes') }}" class="brand-logo"><img class="logo" src="../static/images/logo_small.png" alt="logo"></a>
+                <a href="{{ url_for('get_recipes') }}" class="brand-logo"><img class="logo"
+                        src="../static/images/logo_small.png" alt="logo"></a>
             </div>
-          </div>
-        <div class="footer-copyright teal darken-4">
-          © EDavies Copyright
-          <!--back to top button-->
-        <button class="btn-large teal darken-4" onclick="topFunction()" id="to_top" title="Go to top"><i class="fas fa-hand-point-up left yellow-text"></i> Back to the start.. </button>
         </div>
-      </footer>
-
+        <div class="footer-copyright teal darken-4">
+            © EDavies Copyright
+            <!--back to top button-->
+            <button class="btn-large teal darken-4" onclick="topFunction()" id="to_top" title="Go to top"><i
+                    class="fas fa-hand-point-up left yellow-text"></i> Back to the start.. </button>
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     {% block scripts %}
     {% endblock %}
 </body>

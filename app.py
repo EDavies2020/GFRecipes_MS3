@@ -9,6 +9,9 @@ if os.path.exists("env.py"):
     import env
 
 
+# ======== CONFIG ======== #
+
+
 app = Flask(__name__)
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
@@ -18,11 +21,19 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# ======== HOME PAGE ======== #
+
+
 @app.route("/")
 @app.route("/get_recipes")
 def get_recipes():
+    # find all recipes from Mongodb
     recipes = mongo.db.recipes.find()
+    # display for all users
     return render_template("recipes.html", recipes=recipes)
+
+
+# ======== USER ACTIONS ======== #
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -31,18 +42,17 @@ def register():
         # check if username already exists
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
+        # return message if username/password exists
         if existing_user:
             flash("Username/Password already exists")
             return redirect(url_for("register"))
-
+        # user created if criteria met
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
         mongo.db.users.insert_one(register)
-
-        # put the new user into 'session' cookie
+        # registration sucessful message
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("account", username=session["user"]))
@@ -79,7 +89,6 @@ def login():
 
 @app.route("/account/<username>", methods=["GET", "POST"])
 def account(username):
-    # get username for user account
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -95,6 +104,21 @@ def logout():
     flash("You have been logged out, see you again soon!")
     session.pop("user")
     return redirect(url_for("get_recipes"))
+
+
+@app.route("/delete_account/<username>")
+def delete_account(username):
+    # get session user's username from the db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    # if username in session is same delete the account
+    mongo.db.users.remove({"username": username.lower()})
+    flash("Your account has been deleted")
+    session.pop("user")
+    return redirect(url_for("register"))
+
+
+# ======== RECIPE ACTIONS ======== #
 
 
 @app.route("/add_recipe", methods=["GET", "POST"])

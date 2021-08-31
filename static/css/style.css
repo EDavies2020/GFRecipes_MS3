@@ -98,15 +98,26 @@ body {
     line-height: 30px;
 }
 #account-page-link-card {
-    margin-top: 60px;
+    margin-top: 40px;
 }
-#account-add h5 {
-    text-align: center;
-    margin-top: 100px;
-    line-height: 40px;
+#link-card-details {
+    margin-top: 50px;
 }
-#account-add h5 a:hover {
+#link-card-details a:hover {
     text-decoration: underline;
+}
+#account-page-delete-card {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+#account-delete {
+    margin-top: 50px;
+}
+#account-delete h5 {
+    color: red;
+}
+#account-delete p {
+    font-size: small;
 }
 /* add recipes page */
 .add-recipe-title {
