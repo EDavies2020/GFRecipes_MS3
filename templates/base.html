@@ -51,8 +51,8 @@
             <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
             <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
             {% else %}
-            <li><a href="{{ url_for('login') }}">Log in</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
+            <li><a href="{{ url_for('login') }}">Log in</a></li>
             {% endif %}
         </ul>
     </header>

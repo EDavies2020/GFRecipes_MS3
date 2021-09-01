@@ -44,6 +44,12 @@ body {
 .reg-button a {
     color: white;
 }
+#search-card {
+    background-color: rgb(229, 235, 232);
+}
+#search-card h5 {
+    margin-bottom: 50px;
+}
 /* recipe cards */
 .card {
     margin-top: 20px;
