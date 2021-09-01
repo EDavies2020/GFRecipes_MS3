@@ -28,8 +28,15 @@ mongo = PyMongo(app)
 @app.route("/get_recipes")
 def get_recipes():
     # find all recipes from Mongodb
-    recipes = mongo.db.recipes.find()
+    recipes = list(mongo.db.recipes.find())
     # display for all users
+    return render_template("recipes.html", recipes=recipes)
+
+
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
 
 
