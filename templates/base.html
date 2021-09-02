@@ -46,15 +46,15 @@
                 <h4 class="center-align sidebar teal darken-3"><strong>GF Kids</strong></h4>
             </li>
             <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
-            <li><a href="{{ url_for('about_us') }}"</a></li>
+            <li><a href="{{ url_for('about_us') }}">About us</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
-            <li><a href="{{ url_for('logout') }}">Log out</a></li>
             <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
             <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
+            <li><a href="{{ url_for('logout') }}">Log out</a></li>
             {% else %}
-            <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="{{ url_for('login') }}">Log in</a></li>
+            <li><a href="{{ url_for('register') }}">Register</a></li>
             {% endif %}
         </ul>
     </header>
@@ -78,16 +78,26 @@
     <!-- footer -->
     <footer class="page-footer teal darken-4">
         <div class="footer-row">
+            <button class="btn-large teal darken-4" onclick="topFunction()" id="to_top" title="Go to top"><i
+                    class="fas fa-hand-point-up left yellow-text"></i> Back to the start.. 
+            </button>
             <div class="col s12 center-align">
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo"><img class="logo"
                         src="../static/images/logo_small.png" alt="logo"></a>
             </div>
+            <div class="col l4 offset-l2 s12 links">
+                <h5 class="white-text">Follow us:</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="https://en-gb.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x"></i></a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://twitter.com/?lang=en-gb"><i class="fab fa-twitter fa-2x"></i></a></li>
+                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/home"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                </ul>
+            </div>
         </div>
+        <!--back to top button-->
         <div class="footer-copyright teal darken-4">
             © EDavies Copyright
-            <!--back to top button-->
-            <button class="btn-large teal darken-4" onclick="topFunction()" id="to_top" title="Go to top"><i
-                    class="fas fa-hand-point-up left yellow-text"></i> Back to the start.. </button>
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
