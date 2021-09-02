@@ -1,3 +1,4 @@
+/* base.html */
 body {
     background-color: rgb(200, 224, 211);
 }
@@ -36,7 +37,7 @@ body {
     line-height: 30px;
 }
 /* homepage page */
-/* cut out welcome - W3Schools tutorial */
+/* cut out welcome header - W3Schools tutorial */
 .image-container {
     background-image: url("/static/images/gfreek1.jpg");
     background-size: cover;
@@ -119,6 +120,47 @@ body {
 .add-button a {
     color: white;
 }
+/* about us page */
+/* carousel */
+#about-header {
+    margin-top: 40px;
+}
+#about-header h3 {
+    margin-top: 165px;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+}
+/* glowing text header - W3 Schools tutorial */
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+  @-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 30px #e66800, 0 0 40px #e66800, 0 0 50px #e66800;
+    } 
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #faa453, 0 0 40px #faa453, 0 0 50px #faa453;
+    }
+    }
+.about-title {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.external-link:hover {
+    text-decoration: underline;
+}
+.who-are-we {
+    margin-bottom: 60px;
+}
+.mums h5 {
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-style: italic;
+}
 /* register page/Log in page */
 .card-panel {
     margin-top: 40px;
@@ -145,13 +187,13 @@ body {
 .account-page-intro h6 {
     line-height: 30px;
 }
-#account-page-link-card {
+.account-page-link-card {
     margin-top: 40px;
 }
-#link-card-details {
+.link-card-details {
     margin-top: 50px;
 }
-#link-card-details a:hover {
+.link-card-details a:hover {
     text-decoration: underline;
 }
 #account-page-delete-card {
@@ -227,47 +269,6 @@ body {
     transform: translate(-50%, -50%);
     color: green;
   }
-/* about us page */
-/* carousel */
-#about-header {
-    margin-top: 40px;
-}
-#about-header h3 {
-    margin-top: 165px;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
-}
-/* glowing text header - W3 Schools tutorial */
-.glow {
-    font-size: 80px;
-    color: #fff;
-    text-align: center;
-    animation: glow 1s ease-in-out infinite alternate;
-    margin-top: 40px;
-    margin-bottom: 50px;
-  }
-  @-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 30px #e66800, 0 0 40px #e66800, 0 0 50px #e66800;
-    } 
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #faa453, 0 0 40px #faa453, 0 0 50px #faa453;
-    }
-    }
-.about-title {
-    margin-top: 35px;
-    margin-bottom: 35px;
-}
-.external-link:hover {
-    text-decoration: underline;
-}
-.who-are-we {
-    margin-bottom: 60px;
-}
-.mums h5 {
-    margin-bottom: 20px;
-    margin-top: 40px;
-    font-style: italic;
-}
 /* 404 error page */
 .error-page {
     margin-top: 30px;

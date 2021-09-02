@@ -1,23 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- page header -->
 <div class="row center-align">
     <div class="col s12 my-recipes-title">
         <h3><b>My Recipes</b></h3>
     </div>
 </div>
+<!-- page introduction -->
 <div class="row center-align">
     <div class="col s12">
         <div class="account-page-intro">
-            <h5 class="center-align blue-text darken-4"><b>On this page you can manage your very own Gluten Free Kids recipes!</b></h5>
+            <h5 class="center-align blue-text darken-4"><b>On this page you can manage your very own Gluten Free Kids
+                    recipes!</b></h5>
             <h6 class="center-align">You can add, edit and delete your recipes</h6>
-            <h6 class="center-align"><i class="fas fa-exclamation-circle red-text"></i> But be careful, once deleted no one will get to see your tasty treats <i class="fas fa-exclamation-circle red-text"></i></h6>
-            <h6 class="center-align">Time to get sharing... have fun and make sure to add a photo so others know what their version of your creation should look like!<br> 
-                <b>Have FUN!!!</b> </h6>
+            <h6 class="center-align"><i class="fas fa-exclamation-circle red-text"></i> But be careful, once deleted no
+                one will get to see your tasty treats <i class="fas fa-exclamation-circle red-text"></i></h6>
+            <h6 class="center-align">Time to get sharing... have fun and make sure to add a photo so others know what
+                their version of your creation should look like!<br>
+                <b>Have FUN!!!</b>
+            </h6>
         </div>
     </div>
 </div>
-
+<!-- my recipes once added -->
 <div class="row">
     {% for recipe in recipes %}
     {% if session.user|lower == recipe.created_by|lower %}
@@ -37,19 +42,22 @@
                 <p class="by">By: {{ recipe.by }}</p>
                 {% if session.user|lower == recipe.created_by|lower %}
                 <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                    class="btn-edit btn-floating btn-small yellow darken-2"><i class="fas fa-edit tooltipped" data-position="bottom" data-tooltip="Edit Recipe"></i></a>
-                <a data-target="{{ recipe._id }}" class="btn modal-trigger btn-floating btn-small red darken-4"><i class="far fa-trash-alt tooltipped" data-position="bottom" data-tooltip="Delete Recipe"></i></a>
-                    <div id="{{ recipe._id }}" class="modal">
-                        <div class="modal-content">
-                            <h5>Are you sure you want to delete this recipe?</h5>
-                        </div>
-                        <div class="modal-footer">
-                            <a href="{{ url_for('my_recipes') }}" 
-                                class="modal-close btn-small yellow darken-2"><i class="far fa-times-circle left"></i>Cancel</a>
-                            <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
-                                class="modal-close btn-small red darken-2"><i class="far fa-trash-alt left"></i>Yes - delete perminantely</a>
-                        </div>
+                    class="btn-edit btn-floating btn-small yellow darken-2"><i class="fas fa-edit tooltipped"
+                        data-position="bottom" data-tooltip="Edit Recipe"></i></a>
+                <a data-target="{{ recipe._id }}" class="btn modal-trigger btn-floating btn-small red darken-4"><i
+                        class="far fa-trash-alt tooltipped" data-position="bottom" data-tooltip="Delete Recipe"></i></a>
+                <div id="{{ recipe._id }}" class="modal">
+                    <div class="modal-content">
+                        <h5>Are you sure you want to delete this recipe?</h5>
                     </div>
+                    <div class="modal-footer">
+                        <a href="{{ url_for('my_recipes') }}" class="modal-close btn-small yellow darken-2"><i
+                                class="far fa-times-circle left"></i>Cancel</a>
+                        <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+                            class="modal-close btn-small red darken-2"><i class="far fa-trash-alt left"></i>Yes - delete
+                            perminantely</a>
+                    </div>
+                </div>
                 {% endif %}
             </div>
             <div class="card-reveal">

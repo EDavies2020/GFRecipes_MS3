@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- add recipe header -->
 <div class="row center-align">
     <div class="col s12 add-recipe-title">
         <h3><b>Your recipe details</b></h3>
@@ -12,8 +12,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix red-text text-darken-4"></i>
-                <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" 
-                    type="text" class="validate" required>
+                <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" type="text" class="validate"
+                    required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled selected>Sweet or Savoury?</option>
                     {% for category in categories %}
-                        <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                     {% endfor %}
                 </select>
                 <label for="category_name">Category</label>
@@ -37,7 +37,7 @@
                 <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
                     <option value="" disabled selected>How difficult is your recipe?</option>
                     {% for difficulty in levels %}
-                        <option value="{{ difficulty.recipe_difficulty }}">{{ difficulty.recipe_difficulty }}</option>
+                    <option value="{{ difficulty.recipe_difficulty }}">{{ difficulty.recipe_difficulty }}</option>
                     {% endfor %}
                 </select>
                 <label for="recipe_difficulty">Difficulty</label>
@@ -47,8 +47,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-sort-numeric-up-alt prefix red-text text-darken-4"></i>
-                <input id="makes" name="makes" minlength="1" maxlength="2" 
-                    type="text" class="validate" required>
+                <input id="makes" name="makes" minlength="1" maxlength="2" type="text" class="validate" required>
                 <label for="makes">How many does the recipe make?</label>
             </div>
         </div>
@@ -56,8 +55,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-user prefix red-text text-darken-4"></i>
-                <input id="by" name="by" minlength="5" maxlength="50" 
-                    type="text" class="validate" required>
+                <input id="by" name="by" minlength="5" maxlength="50" type="text" class="validate" required>
                 <label for="by">Author</label>
             </div>
         </div>
@@ -65,8 +63,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="far fa-clock prefix red-text text-darken-4"></i>
-                <input id="prep_time" name="prep_time" minlength="5" maxlength="50" 
-                    type="text" class="validate" required>
+                <input id="prep_time" name="prep_time" minlength="5" maxlength="50" type="text" class="validate"
+                    required>
                 <label for="prep_time">How long to prep? (in hrs and mins)</label>
             </div>
         </div>
@@ -74,8 +72,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-temperature-high prefix red-text text-darken-4"></i>
-                <input id="cooking_time" name="cooking_time" minlength="5" maxlength="50" 
-                    type="text" class="validate" required>
+                <input id="cooking_time" name="cooking_time" minlength="5" maxlength="50" type="text" class="validate"
+                    required>
                 <label for="cooking_time">How long to cook? (in hrs and mins)</label>
             </div>
         </div>
@@ -92,16 +90,16 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-list-ol prefix red-text text-darken-4"></i>
-                <textarea id="method" name="method" minlength="5" maxlength="2000"
-                    class="materialize-textarea validate" required></textarea>
+                <textarea id="method" name="method" minlength="5" maxlength="2000" class="materialize-textarea validate"
+                    required></textarea>
                 <label for="method">Method</label>
             </div>
         </div>
         <!-- add image -->
         <div class="row">
             <div class="input-field col s12">
-                <i class= "fas fa-link prefix red-text text-darken-4"></i>
-                <input value="https://" id="image" name= "image" minlength="20" type="text" class="validate" required>
+                <i class="fas fa-link prefix red-text text-darken-4"></i>
+                <input value="https://" id="image" name="image" minlength="20" type="text" class="validate" required>
                 <label class="active" for="image">Recipe image link</label>
             </div>
         </div>
@@ -112,5 +110,4 @@
         </div>
     </form>
 </div>
-
 {% endblock %}

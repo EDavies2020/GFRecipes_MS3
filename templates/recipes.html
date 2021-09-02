@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- page header and introduction -->
 <div class="row center-align welcome-section">
   <div class="col s12">
     <div class="image-container">
@@ -12,6 +12,7 @@
     <p class="welcome-text center-align">This site has been created for parents of children who are gluten free to
       share recipes their little angels enjoy</p>
       <h6 class="welcome-text center-align">Want to share your recipes?</h6>
+    <!-- link to registration page -->
     <div class="reg-button btn-small green darken-2">
       <a href="{{ url_for('register') }}"><i class="fas fa-sign-in-alt left green darken-2">
         </i>Register here</a>
@@ -38,6 +39,7 @@
       </div>
   </div>
 </div>
+<!-- search function -->
 <div class="row card-panel">
   <form action="{{ url_for('search') }}" method="POST" class="col s12" id="search-card">
     <h5 class="center-align red-text text-darken-4">Want to find our Fav? Or just search for your child fav ingredient?</h5>
@@ -48,13 +50,13 @@
         <label for="query">Search our Gluten Free recipes</label>
       </div>
       <div class="col s12 m4">
-        <button type="submit" class="light-blue darken-1 btn text-shadow"></i>Find</button>
+        <button type="submit" class="light-blue darken-1 btn text-shadow">Find</button>
         <a href="{{ url_for('get_recipes') }}" class="orange darken-2 btn text-shadow">clear</a>
       </div>
     </div>
   </form>
 </div>
-
+<!-- recipe cards -->
 <div class="row">
   {% if recipes|length > 0 %}
   {% for recipe in recipes %}
@@ -64,8 +66,8 @@
         <img class="activator" src="{{ recipe.image }}" alt="recipe_image">
       </div>
       <div class="card-content">
-        <span class="card-title activator blue-text text-light-blue darken-4"><i
-            class="fas fa-chevron-circle-down fa-lg right tooltipped" data-position="right"
+        <span class="card-title activator blue-text text-light-blue darken-4">
+          <i class="fas fa-chevron-circle-down fa-lg right tooltipped" data-position="right"
             data-tooltip="click for recipe"></i></span>
         <h5 class="name red-text text-darken-4">{{ recipe.recipe_name }}</h5>
         <p class="category">{{ recipe.category_name }}</p>
@@ -97,9 +99,7 @@
   {% else %}
   <h5 class="red-text text-darken-4 center-align"><i class="far fa-frown"></i> Sorry there is no recipe with that ingredient</h5>
   <p class="orange-text text-darken-4 center-align">Why not ceate your own account and add one? 
-    <a href="{{ url_for('register') }}">Register Here</p></h4>
+    <a href="{{ url_for('register') }}">Register Here</a></p>
 {% endif%}
-
 </div>
-
 {% endblock %}

@@ -1,20 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- 404 and 505 page wrror messages -->
 <div class="col s12 error-page">
     <div class="center-align">
-        <h4 class="center-align black-text"> <b>It looks like something has gone wrong! 
-            <br>But.....</h4>
+        <h4 class="center-align black-text"><b>It looks like something has gone wrong!</b><br>But.....</h4>
         <img src="../static/images/rubber-stamp.jpg" alt="dont-panic">
-        <h5 class="center-align blue-text text-darken-2"> click the link below to safely return to our homepage</h5>
+        <h5 class="center-align blue-text text-darken-2">click the link below to safely return to our homepage</h5>
     </div>
 </div>
-
 <div class="col s12 center-align home-button">
     <div class="btn-large green pulse darken-2 text-shadow">
         <a href="{{ url_for('get_recipes') }}" class="white-text"><i class="fas fa-home"></i>Take me home!</a>
     </div>
 </div>
-
-
 {% endblock %}

@@ -13,7 +13,8 @@
         <div class="account-page-intro">
             <h6 class="center-align blue-text darken-4"><b>From your account you can add, edit and delete recipes
                     you've shared with the Gluten Free Kids community</b></h6>
-            <h6 class="center-align">We would love for you to share recipes you find that kids that are gluten free would enjoy</h6>
+            <h6 class="center-align">We would love for you to share recipes you find that kids that are gluten free
+                would enjoy</h6>
             <h6 class="center-align">If you have any recipes that gluten free kids and their siblings (who may not be
                 gluten free) also enjoy then even better!!</h6>
             <h6 class="center-align">You can share your own recipes or recipes you have found online, they just need to
@@ -22,13 +23,13 @@
     </div>
 </div>
 <!--add recipe link card-->
-<div class="col s12" id="account-page-link-card">
+<div class="col s12 account-page-link-card">
     <div class="card horizontal">
         <div class="card-image">
             <img src="../static/images/cooking.jpg" alt="cooking">
         </div>
         <div class="card-stacked">
-            <div class="card-content center-align red-text darken-4" id="link-card-details">
+            <div class="card-content center-align red-text darken-4 link-card-details">
                 <h5>To share your tasty Gluten Free Recipe..<br></h5>
                 <a href="{{ url_for('add_recipe') }}">Click Here</a>
             </div>
@@ -36,10 +37,10 @@
     </div>
 </div>
 <!--my recipes link card-->
-<div class="col s12" id="account-page-link-card">
+<div class="col s12 account-page-link-card">
     <div class="card horizontal" id="account-page-link-card">
         <div class="card-stacked">
-            <div class="card-content center-align red-text darken-4" id="link-card-details">
+            <div class="card-content center-align red-text darken-4 link-card-details">
                 <h5>Want to View, Amend or Delete your Recipes?</h5>
                 <a href="{{ url_for('my_recipes') }}">Click Here</a>
             </div>
@@ -60,19 +61,22 @@
                 <h6>Want to delete your account?</h6>
                 <h6>We will be sorry to see you go!</h6>
                 <p>However, if you have decided you no longer want your account then please click the link below</p>
+                <!--delete account confirmation modal-->
                 <a class="modal-trigger" href="#deletemodal">delete account</a>
-                    <div id="deletemodal" class="modal">
-                        <div class="modal-content">
-                            <h5>Are you sure you want to delete your account?</h5>
-                            <p>Please note: Once your account is deleted, all of your information will be perminantely removed</p>
-                        </div>
-                        <div class="modal-footer">
-                            <a href="{{ url_for('get_recipes') }}" 
-                                class="modal-close btn-small yellow darken-2"><i class="far fa-times-circle left"></i>Cancel</a>
-                            <a href="{{ url_for('delete_account', username=username|lower) }}""
-                                class="modal-close btn-small red darken-2"><i class="far fa-trash-alt left"></i>Yes - delete perminantely</a>
-                        </div>
+                <div id="deletemodal" class="modal">
+                    <div class="modal-content">
+                        <h5>Are you sure you want to delete your account?</h5>
+                        <p>Please note: Once your account is deleted, all of your information will be perminantely
+                            removed</p>
                     </div>
+                    <div class="modal-footer">
+                        <a href="{{ url_for('get_recipes') }}" class="modal-close btn-small yellow darken-2"><i
+                                class="far fa-times-circle left"></i>Cancel</a>
+                        <a href="{{ url_for('delete_account', username=username|lower) }}"
+                                class=" modal-close btn-small red darken-2"><i class="far fa-trash-alt left"></i>Yes -
+                            delete perminantely</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

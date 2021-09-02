@@ -17,6 +17,7 @@
     {% endblock %}
     <title>Document</title>
 </head>
+
 <body>
     <!-- navbar -->
     <header>
@@ -78,24 +79,31 @@
     <!-- footer -->
     <footer class="page-footer teal darken-4">
         <div class="footer-row">
+            <!-- back to top button -->
             <button class="btn-large teal darken-4" onclick="topFunction()" id="to_top" title="Go to top"><i
-                    class="fas fa-hand-point-up left yellow-text"></i> Back to the start.. 
+                    class="fas fa-hand-point-up left yellow-text"></i> Back to the start..
             </button>
+            <!-- logo -->
             <div class="col s12 center-align">
                 <a href="{{ url_for('get_recipes') }}" class="brand-logo"><img class="logo"
                         src="../static/images/logo_small.png" alt="logo"></a>
             </div>
+            <!-- social media links -->
             <div class="col l4 offset-l2 s12 links">
                 <h5 class="white-text">Follow us:</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="https://en-gb.facebook.com/"><i class="fab fa-facebook fa-2x"></i></a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/"><i class="fab fa-instagram fa-2x"></i></a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://twitter.com/?lang=en-gb"><i class="fab fa-twitter fa-2x"></i></a></li>
-                  <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/home"><i class="fab fa-linkedin fa-2x"></i></a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://en-gb.facebook.com/"><i
+                                class="fab fa-facebook fa-2x"></i></a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.instagram.com/"><i
+                                class="fab fa-instagram fa-2x"></i></a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://twitter.com/?lang=en-gb"><i
+                                class="fab fa-twitter fa-2x"></i></a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://www.linkedin.com/home"><i
+                                class="fab fa-linkedin fa-2x"></i></a></li>
                 </ul>
             </div>
         </div>
-        <!--back to top button-->
+        <!-- copyright -->
         <div class="footer-copyright teal darken-4">
             © EDavies Copyright
         </div>
