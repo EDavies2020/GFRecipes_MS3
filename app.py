@@ -40,6 +40,14 @@ def search():
     return render_template("recipes.html", recipes=recipes)
 
 
+# ======== ABOUT US ======== #
+
+
+@app.route("/about_us")
+def about_us():
+    return render_template("about_us.html")
+
+
 # ======== USER ACTIONS ======== #
 
 

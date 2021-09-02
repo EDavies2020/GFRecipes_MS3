@@ -8,6 +8,7 @@ $(document).ready(function () {
       'next');
   }, 2000);
   $('.modal').modal();
+  $('.slider').slider();
 });
 
 // Back to top on scroll function - W3Schools tutorial

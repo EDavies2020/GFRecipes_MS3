@@ -27,11 +27,7 @@ body {
     text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
     padding-right: 30px;
 }
-/* recipes page */
-/* carousel */
-#carousel-auto {
-    margin-top: 60px;
-}
+/* homepage page */
 .welcome-header {
     margin-bottom: 20px;
 }
@@ -44,11 +40,16 @@ body {
 .reg-button a {
     color: white;
 }
-#search-card {
-    background-color: rgb(229, 235, 232);
+#monthly-card {
+    border: solid 20px white;
+}
+#monthly-card-details {
+
 }
 #search-card h5 {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px darkred;
 }
 /* recipe cards */
 .card {
@@ -185,3 +186,8 @@ body {
     transform: translate(-50%, -50%);
     color: green;
   }
+/* about us page */
+/* carousel */
+#about-header {
+    margin-top: 40px;
+}
