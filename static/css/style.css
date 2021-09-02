@@ -235,7 +235,7 @@ body {
     text-align: center;
     animation: glow 1s ease-in-out infinite alternate;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
   @-webkit-keyframes glow {
     from {
@@ -245,3 +245,18 @@ body {
         text-shadow: 0 0 20px #fff, 0 0 30px #faa453, 0 0 40px #faa453, 0 0 50px #faa453;
     }
     }
+.about-title {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.external-link:hover {
+    text-decoration: underline;
+}
+.who-are-we {
+    margin-bottom: 60px;
+}
+.mums h5 {
+    margin-bottom: 20px;
+    margin-top: 40px;
+    font-style: italic;
+}
