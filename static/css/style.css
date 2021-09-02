@@ -43,8 +43,20 @@ body {
 #monthly-card {
     border: solid 20px white;
 }
-#monthly-card-details {
-
+#monthly-card-details h5 {
+    padding-bottom: 20px;
+    color: darkred;
+    font-weight: bold;
+    border-bottom: solid 0.5px;
+}
+#monthly-card-details h6 {
+    color: blue;
+    padding-bottom: 10px;
+}
+#monthly-card-details p {
+    line-height: 20px;
+    padding-bottom: 5px;
+    padding-top: 15px;
 }
 #search-card h5 {
     margin-bottom: 40px;
