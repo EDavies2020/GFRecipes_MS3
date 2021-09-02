@@ -28,23 +28,30 @@ body {
     padding-right: 30px;
 }
 /* homepage page */
-/* glowing text header - W3 Schools tutorial */
-.glow {
-    font-size: 80px;
-    color: #fff;
-    text-align: center;
-    animation: glow 1s ease-in-out infinite alternate;
+/* cut out welcome - W3Schools tutorial */
+.image-container {
+    background-image: url("/static/images/gfreek1.jpg");
+    background-size: cover;
+    position: relative;
+    height: 300px;
     margin-top: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
-  @-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 30px #e66800, 0 0 40px #e66800, 0 0 50px #e66800;
-    } 
-    to {
-        text-shadow: 0 0 20px #fff, 0 0 30px #faa453, 0 0 40px #faa453, 0 0 50px #faa453;
-    }
-    }
+.text {
+    background-color: white;
+    color: black;
+    font-size: 6vw; 
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 10px;
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: screen;
+  }
 .welcome-text {
     line-height: 30px;
 }
@@ -221,4 +228,20 @@ body {
     margin-top: 165px;
     text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
 }
-
+/* glowing text header - W3 Schools tutorial */
+.glow {
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  @-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 30px #e66800, 0 0 40px #e66800, 0 0 50px #e66800;
+    } 
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #faa453, 0 0 40px #faa453, 0 0 50px #faa453;
+    }
+    }
