@@ -27,13 +27,13 @@
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+                    <li><a href="{{ url_for('about_us') }}">About us</a></li>
                     {% if session.user %}
                     <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
                     <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
                     <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
                     <li><a href="{{ url_for('logout') }}">Log out</a></li>
                     {% else %}
-                    <li><a href="{{ url_for('about_us') }}">About us</a></li>
                     <li><a href="{{ url_for('login') }}">Log in</a></li>
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                     {% endif %}
@@ -46,13 +46,13 @@
                 <h4 class="center-align sidebar teal darken-3"><strong>GF Kids</strong></h4>
             </li>
             <li><a href="{{ url_for('get_recipes') }}">Home</a></li>
+            <li><a href="{{ url_for('about_us') }}"</a></li>
             {% if session.user %}
             <li><a href="{{ url_for('account', username=session['user']) }}">My Account</a></li>
             <li><a href="{{ url_for('logout') }}">Log out</a></li>
             <li><a href="{{ url_for('add_recipe') }}">Add Recipe</a></li>
             <li><a href="{{ url_for('my_recipes') }}">My Recipes</a></li>
             {% else %}
-            <li><a href="{{ url_for('about_us') }}"</a></li>
             <li><a href="{{ url_for('register') }}">Register</a></li>
             <li><a href="{{ url_for('login') }}">Log in</a></li>
             {% endif %}
@@ -64,7 +64,7 @@
         {% if messages %}
         {% for message in messages %}
         <div class="row flashes">
-            <h4 class="message center-align white-text"><b>{{ message }}</b></h4>
+            <h4 class="message center-align amber-text accent-4"><b>{{ message }}</b></h4>
         </div>
         {% endfor %}
         {% endif %}

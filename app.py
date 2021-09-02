@@ -201,9 +201,21 @@ def my_recipes():
     return render_template("my_recipes.html", recipes=recipes)
 
 
+# ======== ERROR PAGES ======== #
+
+
+@ app.errorhandler(404)
+def not_found(error):
+    # Displays 404 error page
+    return render_template("404.html"), 404
+
+
+# ============================================ #
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
 
 # change to false before submission
