@@ -18,7 +18,7 @@ Users can register for a free account and then share recipes with other users, t
 2. User Experience (UX)
 3. Design
 4. Wireframes
-5. 
+5. Features
 
 ## Introduction
 -------------------
@@ -132,7 +132,30 @@ Users can register for a free account and then share recipes with other users, t
 
 * Add Recipe Page
 
-    * On this page users can add 
+    * On this page users can add all the details for your recipe, on each item there is a prompt for the the information required
+    * The underline will be red if criteria is not met
+    * There is a 'Add Recipe' button which will add the users recipe to the Mongodb database. It will add the recipe to the my recipe page and homepage
+    * A flash message will let the user known their recipe has been added
+
+* My Recipes Page
+
+    * Once the users recipes are add they will appear in this section in the same format as the cards on the homepage
+    * The cards have 2 floating buttons which are tooltipped to display the purpose of the button when hovered over
+    * The edit button takes the user to the edit page where they can amend their recipe
+    * The edit recipe form allows the user to save or cancel their changes
+    * When changes are made a flash message advises the user that the recipe has been updated
+    * The red button allows the user to delete their recipe from the mongodb database
+    * The delete button triggers a modal which offers the option to cancel or confirm the request to delete. If delete is selected the record will be deleted permanently 
+    
+* Logout
+
+    * The Logout link logs the user out of their account
+    * When clicked the user is directed to the homepage
+    * A flash message will be displayed to let the user know they have been logged out
+
+
+    
+
 
 
 
