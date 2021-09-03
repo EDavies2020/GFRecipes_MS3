@@ -11,16 +11,20 @@ The site created is a fictional recipe sharing buisness set up by a group of fic
 
 Users can register for a free account and then share recipes with other users, they can also edit or delete their recipes and if they've had enough they can delete their account.
 
-# Table of Contents
+# Table of Contents :house: <a name="home"></a>
 
-1. Introduction
-2. User Experience (UX)
+1. [Introduction](#Introduction)
+2. [User Experience (UX)](#UX)
 3. Design
 4. Wireframes
 5. Features
 6. Technologies Used
+7. Deployment
+8. Cloning Repository
 
-# Introduction
+
+# Introduction <a name="introduction"></a>
+
 
 ## Website Purpose :
 
@@ -37,7 +41,9 @@ Users can register for a free account and then share recipes with other users, t
 * Images to be bright, colourful and relevant
 * Layout & content to be child friendly for family to view together
 
-# User Experience (UX)
+
+# User Experience (UX) <a name="UX"></a>
+
 
 ## First time user goals :
 
@@ -199,6 +205,11 @@ The navbar and footer logos share the same colours as the corresponding border
 * Used to hash users passwords
 
 
+# Testing
+
+Testing can be found here: [TESTING.md](TESTING.md)
+
+
 # Deployment
 
 ## This project was deloyed in Heroku using the following steps:
@@ -250,3 +261,47 @@ was successfully deployed."
 The deployed site is now available and should automatically update whenever changes are pushed to the GitHub repository. <br>
 <br>
 When you log back into Heroku you can simply launch your app from your desktop view by selecting the 'Open App' button in the top right hand corner
+
+# Cloning Repository
+
+* Cloning using GitHub: 
+
+1. On GitHub, navigate to the main page of the repository
+2. Above the list of files, click on the 'Code' button
+
+![Image](static/images/readme/codebutton.PNG) 
+
+3. To clone the repository using HTTPS, under "Clone with HTTPS", click on the clipboard icon 
+4. Open Git Bash
+5. Change the current working directory to the location you want the clone saved
+6. Type git clone, and then paste the URL you copied earlier and press enter to create your local clone
+
+![Image](static/images/readme/gfrecipesclone.PNG) 
+
+7. When it shows as done your files will be cloned to your desktop
+
+
+# Credits
+
+
+## Code
+
+* [w3schools](https://www.w3schools.com/)  
+
+* Materialize
+* Code Institute
+*Slack
+
+## Content
+
+* BBC Good food
+
+## Media
+
+* Images were sourced from [unspalsh](https://unsplash.com/), [pixabay](https://pixabay.com/) 
+BBC Good Food
+
+
+## Acknowledgements
+
+*
