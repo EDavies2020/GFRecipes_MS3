@@ -85,10 +85,10 @@ def login():
         if existing_user:
             # check password matches
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                return redirect(url_for(
-                "account", username=session["user"]))
+                    existing_user["password"], request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        return redirect(url_for(
+                            "account", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username/Password")
@@ -158,8 +158,8 @@ def add_recipe():
 
     categories = mongo.db.categories.find().sort("category_name", 1)
     levels = mongo.db.levels.find().sort("recipe_difficulty", 1)
-    return render_template("add_recipe.html", categories=categories, 
-    levels=levels)
+    return render_template(
+        "add_recipe.html", categories=categories, levels=levels)
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
@@ -185,8 +185,8 @@ def edit_recipe(recipe_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     levels = mongo.db.levels.find().sort("recipe_difficulty", 1)
     return render_template(
-    "edit_recipe.html", recipe=recipe, categories=categories, 
-    levels=levels)
+        "edit_recipe.html", recipe=recipe, categories=categories,
+        levels=levels)
 
 
 @app.route("/delete_recipe/<recipe_id>")
@@ -223,4 +223,4 @@ def not_found(error):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
