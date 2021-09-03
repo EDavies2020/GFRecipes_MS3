@@ -106,12 +106,17 @@ Users can register for a free account and then share recipes with other users, t
     * There is a search bar which is set to search for words in recipe name, category and ingredients
     * Recipe cards feature a reveal button which displays the timings, ingredients and method
 
+    About us
+    * Sliding Carousel featuring captions that slide into place from left/right and center
+    * Header has CSS glow effect
+    * Links to 
+
     Registration/Login pages
     * Both pages ask for a username and password and specify how many characters are required
     * The underline will be red if criteria is not met
     * Flash messages let you know if username/password already exist. It doesnt specify which is incorrect for security purposes
     * There is a link to Login from Registration page if you already have an account and vice versa on Login page
-    
+
 
 
 
