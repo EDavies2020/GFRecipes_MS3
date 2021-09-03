@@ -2,11 +2,6 @@ $(document).ready(function () {
   $(".sidenav").sidenav({ edge: "right" });
   $('.tooltipped').tooltip();
   $('select').formSelect();
-  $('#carousel-auto').carousel();
-  setInterval(function () {
-    $('#carousel-auto').carousel(
-      'next');
-  }, 2000);
   $('.modal').modal();
   $('.slider').slider();
 });
