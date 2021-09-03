@@ -92,6 +92,7 @@ Users can register for a free account and then share recipes with other users, t
 --------------
 
 * Navbar/Footer
+
     * The navbar & footer code came from [Materialize](https://materializecss.com/) 
     * The navbar features the company logo to the left and links to the other pages on the right
     * The navbar switches to a sidebar on smaller screens 
@@ -101,21 +102,37 @@ Users can register for a free account and then share recipes with other users, t
     * The footer also features a return to top button
 
 * Homepage
+
     * There is a brief introduction to the page followed by a prompt to register for an account
     * There is a monthly fav section showcasing an exsiting recipes and prompts to user to look further
     * There is a search bar which is set to search for words in recipe name, category and ingredients
     * Recipe cards feature a reveal button which displays the timings, ingredients and method
 
-    About us
+* About Us Page
+
     * Sliding Carousel featuring captions that slide into place from left/right and center
     * Header has CSS glow effect
-    * Links to 
+    * Links to [wikipedia](https://en.wikipedia.org/wiki/Gluten-free_diet) and [Ceoliac UK](https://www.coeliac.org.uk/information-and-support/living-gluten-free/the-gluten-free-diet/about-gluten/) are provided with information about being gluten free
 
-    Registration/Login pages
+* Registration/Login pages
+
     * Both pages ask for a username and password and specify how many characters are required
     * The underline will be red if criteria is not met
     * Flash messages let you know if username/password already exist. It doesnt specify which is incorrect for security purposes
     * There is a link to Login from Registration page if you already have an account and vice versa on Login page
+
+* Account page
+
+    * The account page features a welcome using the users name
+    * There is a brief intoduction to you account
+    * There are 3 horizontal cards with the following links :
+    1. The first card displays a link to add a recipe
+    2. The second card displays a link to your recipes page
+    3. The third card has link to delet your account. When the link is clicked this triggers a modal to confirm you wish to delete or cancel this request
+
+* Add Recipe Page
+
+    * On this page users can add 
 
 
 

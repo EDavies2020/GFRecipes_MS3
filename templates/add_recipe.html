@@ -56,7 +56,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-user prefix red-text text-darken-4"></i>
                 <input id="by" name="by" minlength="5" maxlength="50" type="text" class="validate" required>
-                <label for="by">Author</label>
+                <label for="by">Author (5-50 characters required)</label>
             </div>
         </div>
         <!-- add prep time -->
@@ -65,7 +65,7 @@
                 <i class="far fa-clock prefix red-text text-darken-4"></i>
                 <input id="prep_time" name="prep_time" minlength="5" maxlength="50" type="text" class="validate"
                     required>
-                <label for="prep_time">How long to prep? (in hrs and mins)</label>
+                <label for="prep_time">How long to prep? (state in hours and minutes)</label>
             </div>
         </div>
         <!-- add cooking time -->
@@ -74,7 +74,7 @@
                 <i class="fas fa-temperature-high prefix red-text text-darken-4"></i>
                 <input id="cooking_time" name="cooking_time" minlength="5" maxlength="50" type="text" class="validate"
                     required>
-                <label for="cooking_time">How long to cook? (in hrs and mins)</label>
+                <label for="cooking_time">How long to cook? (state in hours and minutes)</label>
             </div>
         </div>
         <!-- add ingredients -->
@@ -83,7 +83,7 @@
                 <i class="fas fa-seedling prefix red-text text-darken-4"></i>
                 <textarea id="ingredients" name="ingredients" minlength="5" maxlength="600"
                     class="materialize-textarea validate" required></textarea>
-                <label for="ingredients">Ingredients (seperate ingredients with / ie. 500g GF flour/ 2 eggs.. )</label>
+                <label for="ingredients">Ingredients (up to 2000 characters, please seperate ingredients with /)</label>
             </div>
         </div>
         <!-- add method -->
@@ -92,7 +92,7 @@
                 <i class="fas fa-list-ol prefix red-text text-darken-4"></i>
                 <textarea id="method" name="method" minlength="5" maxlength="2000" class="materialize-textarea validate"
                     required></textarea>
-                <label for="method">Method</label>
+                <label for="method">Method (up to 2000 characters)</label>
             </div>
         </div>
         <!-- add image -->
@@ -100,7 +100,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-link prefix red-text text-darken-4"></i>
                 <input value="https://" id="image" name="image" minlength="20" type="text" class="validate" required>
-                <label class="active" for="image">Recipe image link</label>
+                <label class="active" for="image">Recipe image link (please provide image url)</label>
             </div>
         </div>
         <!-- submit button -->
