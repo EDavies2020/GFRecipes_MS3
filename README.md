@@ -11,17 +11,18 @@ The site created is a fictional recipe sharing buisness set up by a group of fic
 
 Users can register for a free account and then share recipes with other users, they can also edit or delete their recipes and if they've had enough they can delete their account.
 
-# Table of Contents :house: <a name="home"></a>
+# Table of Contents <a name="home"></a>
 
 1. [Introduction](#Introduction)
 2. [User Experience (UX)](#UX)
-3. Design
-4. Wireframes
-5. Features
-6. Technologies Used
-7. Deployment
-8. Cloning Repository
-
+3. [Design](#Design)
+4. [Wireframes](#Wirefames)
+5. [Features](#Features)
+6. [Technologies Used](#Technologies)
+7. [Testing](#Testing)
+8. [Deployment](#Deployment)
+9. [Cloning Repository](#Cloning)
+10. [Credits](#Credits)
 
 # Introduction <a name="introduction"></a>
 
@@ -66,13 +67,14 @@ Users can register for a free account and then share recipes with other users, t
 * Feedback section - area for user to feedback on site and/or recipes
 * Blog for any new GF products/news or events that are relevant
 
-# Wireframes
+# Wireframes <a name="Wireframes"></a>
 
 
 *** to be uploaded ***
 
 
-# Design
+# Design <a name="Design"></a>
+
 
 ## Colours:
 
@@ -92,7 +94,7 @@ Users can register for a free account and then share recipes with other users, t
 * I used [favicon.io](https://favicon.io/) to create my favicon for the site
 
 
-# Features
+# Features <a name="Features"></a>
 
 
 ## Navbar/Footer
@@ -158,7 +160,7 @@ The navbar and footer logos share the same colours as the corresponding border
 * A flash message will be displayed to let the user know they have been logged out
 
 
-# Technologies Used
+# Technologies <a name="Technologies"></a>
 
 
 1. Languages used: HTML5, CSS3, JQuery, Javascript,  Python and Jinja
@@ -205,12 +207,14 @@ The navbar and footer logos share the same colours as the corresponding border
 * Used to hash users passwords
 
 
-# Testing
+# Testing <a name="Testing"></a>
+
 
 Testing can be found here: [TESTING.md](TESTING.md)
 
 
-# Deployment
+# Deployment <a name="Deployment"></a>
+
 
 ## This project was deloyed in Heroku using the following steps:
 
@@ -262,7 +266,9 @@ The deployed site is now available and should automatically update whenever chan
 <br>
 When you log back into Heroku you can simply launch your app from your desktop view by selecting the 'Open App' button in the top right hand corner
 
-# Cloning Repository
+
+# Cloning <a name="Cloning"></a>
+
 
 * Cloning using GitHub: 
 
@@ -281,7 +287,7 @@ When you log back into Heroku you can simply launch your app from your desktop v
 7. When it shows as done your files will be cloned to your desktop
 
 
-# Credits
+# Credits <a name="Credits"></a>
 
 
 ## Code
