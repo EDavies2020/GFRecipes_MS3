@@ -130,7 +130,7 @@ def delete_account(username):
     mongo.db.users.remove({"username": username.lower()})
     flash("Your account has been deleted")
     session.pop("user")
-    return redirect(url_for("register"))
+    return redirect(url_for("get_recipes"))
 
 
 # ======== RECIPE ACTIONS ======== #

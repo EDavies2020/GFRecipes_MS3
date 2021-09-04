@@ -183,7 +183,8 @@ Desktop:
     * Share recipe card link works properly and directs user to add recipe page
     * Amend recipe card link works properly and directs user to my recipes page
     * Delete account link works correctly and opens modal. Modal has been created to double check decision to delete account
-    *
+    * Cancel button works correctly and takes the user back to thier account page
+    *  
 
 
 [Back to Testing](TESTING.md)
