@@ -307,20 +307,19 @@ When you log back into Heroku you can simply launch your app from your desktop v
 
 
 ### Cloning using GitHub: 
-
-1. On GitHub, navigate to the main page of the repository
-2. Above the list of files, click on the 'Code' button
+* On GitHub, navigate to the main page of the repository
+* Above the list of files, click on the 'Code' button
 
 ![Image](static/images/readme/codebutton.PNG) 
 
-3. To clone the repository using HTTPS, under "Clone with HTTPS", click on the clipboard icon 
-4. Open Git Bash
-5. Change the current working directory to the location you want the clone saved
-6. Type git clone, and then paste the URL you copied earlier and press enter to create your local clone
+* To clone the repository using HTTPS, under "Clone with HTTPS", click on the clipboard icon 
+* Open Git Bash
+* Change the current working directory to the location you want the clone saved
+* Type git clone, and then paste the URL you copied earlier and press enter to create your local clone
 
 ![Image](static/images/readme/gfrecipesclone.PNG) 
 
-7. When it shows as done your files will be cloned to your desktop
+* When it shows as done your files will be cloned to your desktop
 
 
 [ Back to Table of Contents](#home)
