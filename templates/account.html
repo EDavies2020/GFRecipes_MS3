@@ -69,7 +69,7 @@
                         <p>Please note: Once your account is deleted, your recipes will remain on the website unless you delete them before deleting your account</p>
                     </div>
                     <div class="modal-footer">
-                        <a href="{{ url_for('get_recipes') }}" class="modal-close btn-small yellow darken-2"><i
+                        <a href="{{ url_for('account', username=session['user']) }}" class="modal-close btn-small yellow darken-2"><i
                                 class="far fa-times-circle left"></i>Cancel</a>
                         <a href="{{ url_for('delete_account', username=username|lower) }}"
                                 class=" modal-close btn-small red darken-2"><i class="far fa-trash-alt left"></i>Yes -

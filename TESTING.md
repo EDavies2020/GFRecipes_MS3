@@ -156,12 +156,34 @@ Desktop:
     * Search bar has been tested using 'sprouts' and returns correct flash message and register link
     * Search bar no result register link works and takes the user to the correct page
     * Search bar 'clear' button works correctly and returns all recipe cards
+    * Recipe cards reveal button works correctly and reveals recipe details
+    * Recipe cards reveal close button correctly closes the reveal
 
-* Homepage - Recipe Cards
-    * Reveal button works correctly and reveals recipe details
-    * Reveal close button correctly closes the reveal
-    * Edit recipe button correctly directs the user to the edit recipe page with the correct recipe details to be edited
-    
+* About Us
+    * Sliding images work and slogan slide into place with no issues
+    * Buttons to select which slide you want work and select the correct picture and the text slides into place with no issues
+    * Glow header glows correctly
+    * External links in 'What is Gluten free?' section work properly and links open in new window
+
+* Register Page
+    * Prompts are present when requested format is incorrect
+    * When existing username/password is used flash message is displayed
+    * For security it doesnt sepcify if username or password already exists
+    * If username & password meet format reqested and do not already exist then register button works correctly and takes user to account page
+    * Link to sign in if you have an existing account works correctly and directs user to log in page
+
+* Log in Page
+    * Prompts are present when requested format is incorrect
+    * When username/password is incorrect flash message is displayed
+    * For security it doesnt sepcify if username or password is incorrect
+    * If username & password meet format reqested and are correct then log in button works correctly and takes user to account page
+    * Link to register if you dont havr an account works correctly and directs user to register page 
+
+* Account Page
+    * Share recipe card link works properly and directs user to add recipe page
+    * Amend recipe card link works properly and directs user to my recipes page
+    * Delete account link works correctly and opens modal. Modal has been created to double check decision to delete account
+    *
 
 
 [Back to Testing](TESTING.md)
