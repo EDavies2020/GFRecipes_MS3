@@ -140,7 +140,20 @@ Desktop:
 
 # Manual Testing <a name="manual"></a>
 
+* Logged out Navbar
+    * All links are working and direct user to the pages that match their name
+    * The Gluten Free Kids Logo when clicked directs the user to the homepage correctly
 
-text here
+* Footer 
+    * The Gluten Free Kids Logo when clicked directs the user to the homepage correctly
+    * 
+
+* Hompage
+    * Register button link takes user to the correct page
+    * Search bar has been tested using 'chocolate' & 'chicken' and returns cards containing these ingredients
+    * Search bar has been tested using 'sprouts' and returns correct flash message and register link
+    * Search bar no result register link works and takes the user to the correct page
+    * Search bar 'clear' button works correctly and returns all recipe cards
+
 
 [Back to Testing](TESTING.md)
