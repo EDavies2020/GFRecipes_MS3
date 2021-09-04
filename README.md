@@ -43,6 +43,9 @@ Users can register for a free account and then share recipes with other users, t
 * Layout & content to be child friendly for family to view together
 
 
+[ Back to Table of Contents](#home)
+
+
 # User Experience (UX) <a name="UX"></a>
 
 
@@ -67,10 +70,17 @@ Users can register for a free account and then share recipes with other users, t
 * Feedback section - area for user to feedback on site and/or recipes
 * Blog for any new GF products/news or events that are relevant
 
+
+[ Back to Table of Contents](#home)
+
+
 # Wireframes <a name="Wireframes"></a>
 
 
 *** to be uploaded ***
+
+
+[ Back to Table of Contents](#home)
 
 
 # Design <a name="Design"></a>
@@ -92,6 +102,9 @@ Users can register for a free account and then share recipes with other users, t
 * I used [Jimdo](https://www.jimdo.com/) to create my company logos
 * I used cartoon images of children and primary colours to keep with the theme of the site
 * I used [favicon.io](https://favicon.io/) to create my favicon for the site
+
+
+[ Back to Table of Contents](#home)
 
 
 # Features <a name="Features"></a>
@@ -160,51 +173,66 @@ The navbar and footer logos share the same colours as the corresponding border
 * A flash message will be displayed to let the user know they have been logged out
 
 
+## Possible Future Features
+* Admin login for administrator to be able to edit/delete all content
+* A 'Retype password' input on the Registration form
+* Add ratings to each recipe
+* Feedback section - area for user to feedback on site and/or recipes
+* Blog for any new GF products/news or events that are relevant
+
+
+
+[ Back to Table of Contents](#home)
+
+
 # Technologies <a name="Technologies"></a>
 
 
 1. Languages used: HTML5, CSS3, JQuery, Javascript,  Python and Jinja
 
 2. [GitHub](https://github.com/) 
-* My project code is stored in GitHub
+    * My project code is stored in GitHub
 
 3. [Git](https://gitpod.io/workspaces/) 
-* Git was used for version control, code created in GitPod was committed and pushed to GitHub
+    * Git was used for version control, code created in GitPod was committed and pushed to GitHub
 
 4. [unspalsh](https://unsplash.com/), [pixabay](https://pixabay.com/)
-* Used for images throughout the site
+    * Used for images throughout the site
 
 5. [Jimdo](https://www.jimdo.com/),
-* Used to create my company logos
+    * Used to create my company logos
 
 6. [favicon.io](https://favicon.io/), 
-* Used to create my favicon
+    * Used to create my favicon
 
 7. [w3schools](https://www.w3schools.com/) 
-* Scroll to top button in the footer was created using tutorial from w3school
-* Cut out welcome on homepage was created using tutorial from w3school
-* Glow text feature on about us page was created using tutorial from w3school 
+    * Scroll to top button in the footer was created using tutorial from w3school
+    * Cut out welcome on homepage was created using tutorial from w3school
+    * Glow text feature on about us page was created using tutorial from w3school 
     
 8. [FontAwesome](https://fontawesome.com/) 
-* Font Awesome icons were used throughout the site
+    * Font Awesome icons were used throughout the site
 
 9. [MongoDB](https://www.mongodb.com/)
-* Used to create non relational database
+    * Used to create non relational database
 
 10. [Flask](https://flask.palletsprojects.com/en/1.1.x/) 
-* Flask framework used to create app
+    * Flask framework used to create app
 
 11. [Materialize](https://materializecss.com/)
-* Used for recipe cards, register & login cards, add & edit forms, delete modals, navbar, side nav, footer, image slider 
+    * Used for recipe cards, register & login cards, add & edit forms, delete modals, navbar, side nav, footer, image slider 
 
 12. [Cloudinary](https://cloudinary.com/)
-* Used to save recipe images added into MongoDB database
+    * Used to save recipe images added into MongoDB database
 
 13. [Heroku](https://heroku.com/)
-* Used to deploy this repository
+    * Used to deploy this repository
 
 14. [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x) 
-* Used to hash users passwords
+    * Used to hash users passwords
+
+
+[ Back to Table of Contents](#home)
 
 
 # Testing <a name="Testing"></a>
@@ -213,64 +241,74 @@ The navbar and footer logos share the same colours as the corresponding border
 Testing can be found here: [TESTING.md](TESTING.md)
 
 
+[ Back to Table of Contents](#home)
+
+
 # Deployment <a name="Deployment"></a>
 
 
 ## This project was deloyed in Heroku using the following steps:
 
-1. Set up files the Heroku needs to run the app <br>
-<br>
-In your development terminal type :
+1. Set up files the Heroku needs to run the app
 
-* <b>"pip3 freeze --local > requirements.txt"</b> This tells Heroku which applications and dependencies are required to run our app
-* <b>"echo web: python app.py > Procfile"</b>
-The Procfile is what Heroku looks for to know which file runs the app, and how to run it.<br>
-    * Notes:<br>
-    Procfile has a capital 'P', and no file extension.<br>
+    * In your development terminal type : <b>"pip3 freeze --local > requirements.txt"</b>
+
+    This tells Heroku which applications and dependencies are required to run our app
+
+    * In your development terminal type : <b>"echo web: python app.py > Procfile"</b>
+
+    The Procfile is what Heroku looks for to know which file runs the app, and how to run it.
+
+    <b>Notes:</b>
+    Procfile has a capital 'P', and no file extension.
+    
     The Procfile might add a blank line at the bottom, sometimes this can cause problems
     when running the app in Heroku, so delete the line and save the file.
-* Push both files to Github (git add, git commit & git push)
+
+    * Push both files to Github (git add, git commit & git push)
 
 2. Create Heroku App
-* Go to [Heroku](https://heroku.com/) and create/log in to your dashboard
-* Click on the 'New' button on the top right hand corner and select 'Create a New App'
-* Name your App and choose your region
-    * Note: app must be unique, and generally use
-    a 'dash' or 'minus' instead of spaces, and all lowercase letters.
-* Click Create App
+    * Go to [Heroku](https://heroku.com/) and create/log in to your dashboard
+    * Click on the 'New' button on the top right hand corner and select 'Create a New App'
+    * Name your App and choose your region
+        * Note: app must be unique, and generally use a 'dash' or 'minus' instead of spaces, and all lowercase letters.
+    * Click Create App
 
 3. Connect to App
-* Deployment method: select 'Connect to Github'
-* make sure you Github profile is displayed search for your repository name
-* Once it finds you app click 'Connect'
+    * Deployment method: select 'Connect to Github'
+    * make sure you Github profile is displayed search for your repository name
+    * Once it finds you app click 'Connect'
 
 4. Securely tell Heroku which variables are required<br>
 <br>
 Because the environment variables are hidden in the env.py file, Heroku won't be able to read those variables.
 
-* Click on the 'Settings' tab for your app, and then click on 'Reveal Config Vars'
-* Make sure not to include any "quotes" for the key, or the value
-* Complete the Config Vars with the information in the env.py file :
+    * Click on the 'Settings' tab for your app, and then click on 'Reveal Config Vars'
+    * Make sure not to include any "quotes" for the key, or the value
+    * Complete the Config Vars with the information in the env.py file :
+
 ![Image](static/images/readme/configvars.PNG)
 
 5. Enable automatic deployment
-* Click on the 'Delpoy' tab
-* In Automatic deploys section click 'Enable Automatic Deploys'
-* In Manual deploy section click 'Diploy Branch'
+    * Click on the 'Delpoy' tab
+    * In Automatic deploys section click 'Enable Automatic Deploys'
+    * In Manual deploy section click 'Diploy Branch'
     * Heroku will now receive the code from GitHub, and start building the app using the required packages
-* Once it's finished, you'll get a message saying "Your app
-was successfully deployed."
-* Click "View" to launch your new app
+    * Once it's finished, you'll get a message saying "Your app was successfully deployed."
+    * Click "View" to launch your new app
 
 The deployed site is now available and should automatically update whenever changes are pushed to the GitHub repository. <br>
 <br>
 When you log back into Heroku you can simply launch your app from your desktop view by selecting the 'Open App' button in the top right hand corner
 
 
+[ Back to Table of Contents](#home)
+
+
 # Cloning <a name="Cloning"></a>
 
 
-* Cloning using GitHub: 
+### Cloning using GitHub: 
 
 1. On GitHub, navigate to the main page of the repository
 2. Above the list of files, click on the 'Code' button
@@ -287,27 +325,52 @@ When you log back into Heroku you can simply launch your app from your desktop v
 7. When it shows as done your files will be cloned to your desktop
 
 
+[ Back to Table of Contents](#home)
+
+
 # Credits <a name="Credits"></a>
 
 
 ## Code
 
-* [w3schools](https://www.w3schools.com/)  
+* [w3schools](https://www.w3schools.com/) 
+    * Scroll to top button in the footer was created using tutorial from w3school
+    * Cut out welcome on homepage was created using tutorial from w3school
+    * Glow text feature on about us page was created using tutorial from w3school  
 
-* Materialize
+* [Materialize](https://materializecss.com/)
+    * Used for recipe cards, register & login cards, add & edit forms, delete modals, navbar, side nav, footer, image slider 
+
 * Code Institute
-*Slack
+    * Backend Development Module, Task Manager Mini Project
+
+* Slack Community
+    * Thread found on adding 404.html
+    * Thread found to help with deleting the correct modal when adding 'delete modal'
 
 ## Content
 
-* BBC Good food
+* [BBC Good food](https://www.bbcgoodfood.com/)
+    * All recipes were copied from BBC good food search: gluten free recipes
 
 ## Media
 
-* Images were sourced from [unspalsh](https://unsplash.com/), [pixabay](https://pixabay.com/) 
-BBC Good Food
+* Images were all sourced from [unspalsh](https://unsplash.com/), [pixabay](https://pixabay.com/) 
+and [BBC Good food](https://www.bbcgoodfood.com/)
 
 
 ## Acknowledgements
 
-*
+A big thank you to the following: 
+
+* Student support for arranging a break for me during a difficult time
+* Tutor support for helping me with a few issues I had during the Backend Development Module
+* My tutor, Spencer for his feedback
+* My wonderfully supportive family for being understanding when I am glued to my laptop for hours on end
+* The Slack community for sharing problems you come across and helpful fixes offered
+* The encouragement from other students Ive connected with during my time on the course, it is a great support network 
+
+
+
+
+[ Back to Table of Contents](#home)
