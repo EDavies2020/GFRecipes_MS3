@@ -146,7 +146,9 @@ Desktop:
 
 * Footer 
     * The Gluten Free Kids Logo when clicked directs the user to the homepage correctly
-    * 
+    * The social media links all open in a new window
+    * As this is a fictional page all social media pages direct to home pages not relevant accounts
+    * Back to top button is working correctly and take user back to the start of the page
 
 * Hompage
     * Register button link takes user to the correct page
@@ -154,6 +156,12 @@ Desktop:
     * Search bar has been tested using 'sprouts' and returns correct flash message and register link
     * Search bar no result register link works and takes the user to the correct page
     * Search bar 'clear' button works correctly and returns all recipe cards
+
+* Homepage - Recipe Cards
+    * Reveal button works correctly and reveals recipe details
+    * Reveal close button correctly closes the reveal
+    * Edit recipe button correctly directs the user to the edit recipe page with the correct recipe details to be edited
+    
 
 
 [Back to Testing](TESTING.md)
