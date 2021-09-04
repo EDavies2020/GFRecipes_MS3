@@ -63,7 +63,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="far fa-clock prefix red-text text-darken-4"></i>
-                <input value=" hrs mins" id="prep_time" name="prep_time" minlength="5" maxlength="50" type="text" class="validate"
+                <input value=" hrs mins" id="prep_time" name="prep_time" minlength="3" maxlength="50" type="text" class="validate"
                     required>
                 <label for="prep_time">How long to prep?</label>
             </div>
@@ -72,7 +72,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-temperature-high prefix red-text text-darken-4"></i>
-                <input value=" hrs mins" id="cooking_time" name="cooking_time" minlength="5" maxlength="50" type="text" class="validate"
+                <input value=" hrs mins" id="cooking_time" name="cooking_time" minlength="3" maxlength="50" type="text" class="validate"
                     required>
                 <label for="cooking_time">How long to cook?</label>
             </div>
@@ -81,18 +81,18 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-seedling prefix red-text text-darken-4"></i>
-                <textarea id="ingredients" name="ingredients" minlength="5" maxlength="600"
+                <textarea id="ingredients" name="ingredients" minlength="20" maxlength="600"
                     class="materialize-textarea validate" required></textarea>
-                <label for="ingredients">Ingredients (up to 2000 characters, please seperate ingredients with /)</label>
+                <label for="ingredients">Ingredients (20 - 2000 characters, please seperate ingredients with /)</label>
             </div>
         </div>
         <!-- add method -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-list-ol prefix red-text text-darken-4"></i>
-                <textarea id="method" name="method" minlength="5" maxlength="2000" class="materialize-textarea validate"
+                <textarea id="method" name="method" minlength="20" maxlength="2000" class="materialize-textarea validate"
                     required></textarea>
-                <label for="method">Method (up to 2000 characters. Please provide step by step)</label>
+                <label for="method">Method (20 - 2000 characters. Please provide step by step)</label>
             </div>
         </div>
         <!-- add image -->
