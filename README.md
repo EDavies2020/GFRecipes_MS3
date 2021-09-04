@@ -1,13 +1,13 @@
 # Gluten Free Kids Website
 
 
-[View live project here](https://dashboard.heroku.com/apps/gf-recipes-ms3/deploy/github)
-
 ![Image](static/images/readme/amiresponsive.PNG)
+
+[View live project here](https://dashboard.heroku.com/apps/gf-recipes-ms3/deploy/github)
 
 This website has been created for my backend development milestone project. 
 
-The site created is a fictional recipe sharing buisness set up by a group of fictional mums, I chose the theme as a mum of a mixed Gluten Free/Normal family so I could relate to the subject I wanted to convey.
+The site created is a fictional recipe sharing buisness set up by a group of fictional mums, As half my family is Gluten Free I understand and can relate to the theme.
 
 Users can register for a free account and then share recipes with other users, they can also edit or delete their recipes and if they've had enough they can delete their account.
 
