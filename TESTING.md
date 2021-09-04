@@ -16,7 +16,18 @@
 # Validation <a name="validation"></a>
 
 
-text here
+* [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate html
+    * As there are so many reports please find all the results [Here](static/images/testing/Html)<br>
+<br>
+* [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate CSS
+    * style.css: [view report](static/images/testing/CSS.pdf)<br> 
+<br>
+* [JS Hint](https://jshint.com/) - Used to validate JavaScript
+    * hmpg.js: [view report](static/images/testing/JSHint.pdf)<br>
+    <br>
+* [PEP8 Online Service](http://pep8online.com/) - Used to validate CSS
+    * style.css: [view report](static/images/testing/PEP8.pdf)
+
 
 [Back to Testing](TESTING.md)
 
