@@ -280,9 +280,7 @@ Testing can be found here: [TESTING.md](TESTING.md)
     * Once it finds you app click 'Connect'
 
 4. Securely tell Heroku which variables are required<br>
-<br>
-Because the environment variables are hidden in the env.py file, Heroku won't be able to read those variables.
-
+<br>Because the environment variables are hidden in the env.py file, Heroku won't be able to read those variables
     * Click on the 'Settings' tab for your app, and then click on 'Reveal Config Vars'
     * Make sure not to include any "quotes" for the key, or the value
     * Complete the Config Vars with the information in the env.py file :
