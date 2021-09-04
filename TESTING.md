@@ -104,9 +104,39 @@ Desktop:
 # Testing User Experience (UX) <a name="ux"></a>
 
 
-text here
+## First time user goals :
+
+* Easily understand the purpose of the website
+    * The purpose of the website is clear from the title and opening welcome statement on the homepage
+    * The purpose/background to how the site came about is explained further on the about us page  
+* Find info on being Gluten Free
+    * There are links to external resources on the about us page 
+* Register to create an account
+    * Users can register for an account on the Register page
+* View recipes and search recipes
+    * Recipes can be viewed on the homepage 
+    * There is a search function on the main page which searches category, recipe name and ingredients
+
+## Returning/Frequent user goals:
+
+* View recipes and search recipes
+    * Recipes can be viewed on the homepage 
+    * There is a search function on the main page which searches category, recipe name and ingredients
+* See new recipes added by other users
+    * All new recipes will be visable on the homepage
+    * Recipes added by other users will be visable on the homepage
+* Check out Monthy Fav recipe
+    * This section is to be manually updated on a monthly basis 
+    * A future consideration would be for this to update automatically
+* Edit/Delete recipes added
+    * Users can edit and delete their recipes from their 'My Recipes' page
+* Delete user account
+    * Users can delete their accounts from their 'Account Page'
+    * There is a prompt to confirm they are sure they wish to delete their account
+
 
 [Back to Testing](TESTING.md)
+
 
 # Manual Testing <a name="manual"></a>
 
