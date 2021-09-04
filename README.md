@@ -297,7 +297,7 @@ Testing can be found here: [TESTING.md](TESTING.md)
 
 The deployed site is now available and should automatically update whenever changes are pushed to the GitHub repository. <br>
 <br>
-When you log back into Heroku you can simply launch your app from your desktop view by selecting the 'Open App' button in the top right hand corner
+When you log back into Heroku you can simply launch your app from your desktop view by selecting the 'Open App' button in the top right hand corner.
 
 
 [ Back to Table of Contents](#home)
