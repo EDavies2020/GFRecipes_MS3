@@ -184,7 +184,9 @@ Desktop:
     * Amend recipe card link works properly and directs user to my recipes page
     * Delete account link works correctly and opens modal. Modal has been created to double check decision to delete account
     * Cancel button works correctly and takes the user back to thier account page
-    *  
+    * Delete button works correctly, redirects user to home page and flash message confirms the account has been deleted
+
+* Add Recipe Page 
 
 
 [Back to Testing](TESTING.md)
