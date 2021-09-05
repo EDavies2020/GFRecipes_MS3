@@ -227,5 +227,6 @@ Desktop:
 
 * Other
     * Each page has been tested on all screen sizes using online responsive media sites
+    * During testing I used the 'back button' regularly and this didnt throw any errors
 
 [Back to Testing](TESTING.md)
