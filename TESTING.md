@@ -158,6 +158,7 @@ Desktop:
     * Search bar 'clear' button works correctly and returns all recipe cards
     * Recipe cards reveal button works correctly and reveals recipe details
     * Recipe cards reveal close button correctly closes the reveal
+    * Data tipped function on card reveal showing correct text
 
 * About Us
     * Sliding images work and slogan slide into place with no issues
@@ -190,6 +191,30 @@ Desktop:
     * Each form element prompts for an input if left blank/if criteria isn't met
     * Pattern attribute was added to image input field to ensure an image link is provided so visually nothing can be left blank.<br>
     I copied code for this found on [Stack Overflow](https://stackoverflow.com/questions/58070841/pattern-in-html5-input-type-url-validation)
+    * Add recipe button works properly and redirects user to my recipes on submission
+    * Flash messages display to let user know recipe is added
+
+* Add Recipe Page 
+    * Each form element prompts for an input if left blank/if criteria isn't met
+    * Pattern attribute was added to image input field to ensure an image link is provided so visually nothing can be left blank.<br>
+    I copied code for this found on [Stack Overflow](https://stackoverflow.com/questions/58070841/pattern-in-html5-input-type-url-validation)
+    * Add recipe button works properly and redirects user to my recipes on submission
+    * Flash messages display to let user know recipe is added
+
+* My Recipes page (after recipes added)
+    * Recipe card reveal button opens card correctly and close button works
+    * Data tipped function on floating buttons & card reveal showing correct text
+    * Edit Button
+        * All field are pre-populated correctly in the edit recipe form
+        * Cancel button correctly directs user back to my recipes page
+        * Submit changes button correctly saves all amendments made (every field was changed for testing), the user is also directed back to the my recipes page where the amended recipe card shows correctly amended
+    * Delete Button
+        
+
+
+* Logout 
+
+* 404 & 505 error pages
 
 
 [Back to Testing](TESTING.md)

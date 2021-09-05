@@ -14,11 +14,11 @@
 </div>
 <!-- edit recipe form -->
 <div class="row card-panel">
-    <form class="col s12" method="POST" action="{{ url_for('add_recipe') }}">
+    <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix red-text text-darken-4"></i>
-                <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" type="text" class="validate"
+                <input id="recipe_name" name="recipe_name" value="{{ recipe.recipe_name }}" type="text" class="validate"
                     required>
                 <label for="recipe_name">Recipe Name</label>
             </div>
@@ -30,7 +30,11 @@
                 <select id="category_name" name="category_name" class="validate" required>
                     <option selected disable value="">Select Category..</option>
                     {% for category in categories %}
-                    <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% if category.category_name == recipe.category_name %}
+                            <option value="{{ category.category_name }}" selected >{{ category.category_name }}</option>
+                        {% else %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
                 <label for="category_name">Category</label>
@@ -42,8 +46,12 @@
                 <i class="far fa-chart-bar prefix red-text text-darken-4"></i>
                 <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
                     <option selected disabled value="">Select Difficulty.. </option>
-                    {% for difficulty in levels %}
-                    <option value="{{ difficulty.recipe_difficulty }}">{{ difficulty.recipe_difficulty }}</option>
+                    {% for level in levels %}
+                        {% if level.recipe_difficulty == level.recipe_difficulty %}
+                            <option value="{{ level.recipe_difficulty }}" selected >{{ level.recipe_difficulty }}</option>
+                        {% else %}
+                            <option value="{{ level.recipe_difficulty }}">{{ level.recipe_difficulty }}</option>
+                        {% endif %}
                     {% endfor %}
                 </select>
                 <label for="recipe_difficulty">Difficulty</label>
@@ -53,7 +61,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-sort-numeric-up-alt prefix red-text text-darken-4"></i>
-                <input id="makes" name="makes" minlength="1" maxlength="2" type="text" class="validate" required>
+                <input id="makes" name="makes" value="{{ recipe.makes }}" type="text" class="validate" required>
                 <label for="makes">How many does the recipe make?</label>
             </div>
         </div>
@@ -61,7 +69,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-user prefix red-text text-darken-4"></i>
-                <input id="by" name="by" minlength="5" maxlength="50" type="text" class="validate" required>
+                <input id="by" name="by" value="{{ recipe.by }}" type="text" class="validate" required>
                 <label for="by">Author (5-50 characters required)</label>
             </div>
         </div>
@@ -69,7 +77,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="far fa-clock prefix red-text text-darken-4"></i>
-                <input value=" hrs mins" id="prep_time" name="prep_time" minlength="3" maxlength="50" type="text" class="validate"
+                <input value="{{ recipe.prep_time }}" id="prep_time" name="prep_time" type="text" class="validate"
                     required>
                 <label for="prep_time">How long to prep?</label>
             </div>
@@ -78,7 +86,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-temperature-high prefix red-text text-darken-4"></i>
-                <input value=" hrs mins" id="cooking_time" name="cooking_time" minlength="3" maxlength="50" type="text" class="validate"
+                <input value="{{ recipe.cooking_time }}" id="cooking_time" name="cooking_time" type="text" class="validate"
                     required>
                 <label for="cooking_time">How long to cook?</label>
             </div>
@@ -87,8 +95,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-seedling prefix red-text text-darken-4"></i>
-                <textarea id="ingredients" name="ingredients" minlength="20" maxlength="600"
-                    class="materialize-textarea validate" required></textarea>
+                <textarea id="ingredients" name="ingredients" minlength="20" maxlength="2000"
+                class="materialize-textarea validate" required> {{ recipe.ingredients }} </textarea>
                 <label for="ingredients">Ingredients (20 - 2000 characters, please seperate ingredients with /)</label>
             </div>
         </div>
@@ -96,8 +104,8 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-list-ol prefix red-text text-darken-4"></i>
-                <textarea id="method" name="method" minlength="20" maxlength="2000" class="materialize-textarea validate"
-                    required></textarea>
+                <textarea id="method" name="method" minlength="20" maxlength="2000"
+                    class="materialize-textarea validate" required>{{ recipe.method }}</textarea>
                 <label for="method">Method (20 - 2000 characters. Please provide step by step)</label>
             </div>
         </div>
@@ -105,7 +113,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-link prefix red-text text-darken-4"></i>
-                <input value="https://" id="image" name="image" class="validate" 
+                <input value="{{ recipe.image }}" id="image" name="image" class="validate" 
                     pattern="http(s?)(:\/\/)((www.)?)(([^.]+)\.)?([a-zA-z0-9\-_]+)(.com|.co.uk|.net|.gov|.org|.in)(\/[^\s]*)?"
                     required>
                 <label class="active" for="image">Provide image url</label>
