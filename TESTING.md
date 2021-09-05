@@ -68,7 +68,7 @@ As this was part of the W3Schools tutorial and it was a warning as opposed to an
 # Errors/Warnings JS Hint <a name="js"></a>
 
 
-This report didnt highlight any errors or warnings to resolve
+This report didn't highlight any errors or warnings to resolve
 
 
 # Errors/Warnings PEP8 <a name="pep8"></a>
@@ -123,9 +123,9 @@ Desktop:
     * Recipes can be viewed on the homepage 
     * There is a search function on the main page which searches category, recipe name and ingredients
 * See new recipes added by other users
-    * All new recipes will be visable on the homepage
-    * Recipes added by other users will be visable on the homepage
-* Check out Monthy Fav recipe
+    * All new recipes will be visible on the homepage
+    * Recipes added by other users will be visible on the homepage
+* Check out Monthly Fav recipe
     * This section is to be manually updated on a monthly basis 
     * A future consideration would be for this to update automatically
 * Edit/Delete recipes added
@@ -150,7 +150,7 @@ Desktop:
     * As this is a fictional page all social media pages direct to home pages not relevant accounts
     * Back to top button is working correctly and take user back to the start of the page
 
-* Hompage
+* Homepage
     * Register button link takes user to the correct page
     * Search bar has been tested using 'chocolate' & 'chicken' and returns cards containing these ingredients
     * Search bar has been tested using 'sprouts' and returns correct flash message and register link
@@ -169,16 +169,19 @@ Desktop:
 * Register Page
     * Prompts are present when requested format is incorrect
     * When existing username/password is used flash message is displayed
-    * For security it doesnt sepcify if username or password already exists
-    * If username & password meet format reqested and do not already exist then register button works correctly and takes user to account page
+    * For security it doesn't specify if username or password already exists
+    * If username & password meet format requested and do not already exist then register button works correctly and takes user to account page
     * Link to sign in if you have an existing account works correctly and directs user to log in page
 
 * Log in Page
     * Prompts are present when requested format is incorrect
     * When username/password is incorrect flash message is displayed
-    * For security it doesnt sepcify if username or password is incorrect
-    * If username & password meet format reqested and are correct then log in button works correctly and takes user to account page
-    * Link to register if you dont havr an account works correctly and directs user to register page 
+    * For security it doesn't specify if username or password is incorrect
+    * If username & password meet format requested and are correct then log in button works correctly and takes user to account page
+    * Link to register if you don't have an account works correctly and directs user to register page 
+
+* Logged in Navbar
+    * All links are working and direct user to the pages that match their name
 
 * Account Page
     * Share recipe card link works properly and directs user to add recipe page
@@ -209,12 +212,20 @@ Desktop:
         * Cancel button correctly directs user back to my recipes page
         * Submit changes button correctly saves all amendments made (every field was changed for testing), the user is also directed back to the my recipes page where the amended recipe card shows correctly amended
     * Delete Button
-        
-
+        * Delete button correctly opens modal which asks for deletion to be confirmed
+        * Within the modal the cancel button correctly navigates the user back to the my recipes page
+        * The delete button within the modal correctly deletes the recipe selected from the my recipes page and navigates the user back to the my recipes page
+        * A flash message displays to confirm to the user that their recipe has been deleted
+    * Add another recipe button is working correctly and directs the user to the add recipe page
 
 * Logout 
+    * Clicking on Logout on the navbar correctly removes the user from their account, it navigates the user back to the main homepage and a flash message displays to confirm the user has been logged out
 
 * 404 & 505 error pages
+    * This was tested by adding /banana to the end of the url to test the 404 page. The 505 is an exact duplicate so hasnt been tested
+    * The custom error page return to home button works properly, directing the user back to the main homepage 
 
+* Other
+    * Each page has been tested on all screen sizes using online responsive media sites
 
 [Back to Testing](TESTING.md)

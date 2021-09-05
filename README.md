@@ -60,7 +60,7 @@ Users can register for a free account and then share recipes with other users, t
 
 * View recipes and search recipes
 * See new recipes added by other users
-* Check out Monthy Fav recipe
+* Check out Monthly Fav recipe
 * Edit/Delete recipes added
 * Delete user account
 
@@ -115,7 +115,7 @@ Users can register for a free account and then share recipes with other users, t
 * The navbar & footer code came from [Materialize](https://materializecss.com/) 
 * The navbar features the company logo to the left and links to the other pages on the right
 * The navbar switches to a sidebar on smaller screens 
-Certain links are only visable for registered users
+Certain links are only visible for registered users
 The navbar and footer logos share the same colours as the corresponding border
 *The footer has links to social media.<br><b>Note:</b> these links are for the pages main sites as this is a fabricated company
 * The footer also features a return to top button
@@ -143,7 +143,7 @@ The navbar and footer logos share the same colours as the corresponding border
 ## Account page
 
 * The account page features a welcome using the users name
-* There is a brief intoduction to you account
+* There is a brief introduction to you account
 * There are 3 horizontal cards with the following links :
     1. The first card displays a link to add a recipe
     2. The second card displays a link to your recipes page
@@ -247,7 +247,7 @@ Testing can be found here: [TESTING.md](TESTING.md)
 # Deployment <a name="Deployment"></a>
 
 
-## This project was deloyed in Heroku using the following steps:
+## This project was deployed in Heroku using the following steps:
 
 1. Set up files the Heroku needs to run the app
 
@@ -279,8 +279,9 @@ Testing can be found here: [TESTING.md](TESTING.md)
     * make sure you Github profile is displayed search for your repository name
     * Once it finds you app click 'Connect'
 
-4. Securely tell Heroku which variables are required<br>
-<br>Because the environment variables are hidden in the env.py file, Heroku won't be able to read those variables
+4. Securely tell Heroku which variables are required
+* Because the environment variables are hidden in the env.py file, Heroku won't be able to read those variables
+
     * Click on the 'Settings' tab for your app, and then click on 'Reveal Config Vars'
     * Make sure not to include any "quotes" for the key, or the value
     * Complete the Config Vars with the information in the env.py file :
@@ -288,9 +289,9 @@ Testing can be found here: [TESTING.md](TESTING.md)
 ![Image](static/images/readme/configvars.PNG)
 
 5. Enable automatic deployment
-    * Click on the 'Delpoy' tab
+    * Click on the 'Deploy' tab
     * In Automatic deploys section click 'Enable Automatic Deploys'
-    * In Manual deploy section click 'Diploy Branch'
+    * In Manual deploy section click 'Deploy Branch'
     * Heroku will now receive the code from GitHub, and start building the app using the required packages
     * Once it's finished, you'll get a message saying "Your app was successfully deployed."
     * Click "View" to launch your new app
