@@ -187,6 +187,9 @@ Desktop:
     * Delete button works correctly, redirects user to home page and flash message confirms the account has been deleted
 
 * Add Recipe Page 
+    * Each form element prompts for an input if left blank/if criteria isn't met
+    * Pattern attribute was added to image input field to ensure an image link is provided so visually nothing can be left blank.<br>
+    I copied code for this found on [Stack Overflow](https://stackoverflow.com/questions/58070841/pattern-in-html5-input-type-url-validation)
 
 
 [Back to Testing](TESTING.md)

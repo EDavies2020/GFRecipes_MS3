@@ -129,7 +129,7 @@ def delete_account(username):
     # if username in session is same delete the account
     mongo.db.users.remove({"username": username.lower()})
     flash("Your account has been deleted")
-    session.pop("user")
+    session.clear()
     return redirect(url_for("get_recipes"))
 
 
@@ -180,6 +180,7 @@ def edit_recipe(recipe_id):
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Your recipe has been updated")
+        return redirect(url_for("my_recipes"))
 
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -193,7 +194,7 @@ def edit_recipe(recipe_id):
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Your recipe has been deleted!")
-    return redirect(url_for("get_recipes"))
+    return redirect(url_for("my_recipes"))
 
 
 @app.route("/my_recipes")

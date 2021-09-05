@@ -3,7 +3,7 @@
 
 ![Image](static/images/readme/amiresponsive.PNG)
 
-[View live project here](https://dashboard.heroku.com/apps/gf-recipes-ms3/deploy/github)
+[View live project here](http://gf-recipes-ms3.herokuapp.com/)
 
 This website has been created for my backend development milestone project. 
 
