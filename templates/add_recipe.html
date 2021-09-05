@@ -22,7 +22,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-question prefix red-text text-darken-4"></i>
                 <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected>Sweet or Savoury?</option>
+                    <option selected disable value="">Sweet or Savoury?</option>
                     {% for category in categories %}
                     <option value="{{ category.category_name }}">{{ category.category_name }}</option>
                     {% endfor %}
@@ -35,7 +35,7 @@
             <div class="input-field col s12">
                 <i class="far fa-chart-bar prefix red-text text-darken-4"></i>
                 <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
-                    <option value="" disabled selected>How difficult is your recipe?</option>
+                    <option selected disabled value="">How difficult is your recipe?</option>
                     {% for difficulty in levels %}
                     <option value="{{ difficulty.recipe_difficulty }}">{{ difficulty.recipe_difficulty }}</option>
                     {% endfor %}
@@ -99,7 +99,9 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-link prefix red-text text-darken-4"></i>
-                <input value="https://" id="image" name="image" minlength="20" type="text" class="validate" required>
+                <input value="https://" id="image" name="image" class="validate" 
+                    pattern="(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})"
+                    required>
                 <label class="active" for="image">Provide image url</label>
             </div>
         </div>
