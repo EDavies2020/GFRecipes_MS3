@@ -208,7 +208,7 @@ body {
 /* add recipes page */
 .add-recipe-title {
     background-image: url(/static/images/recipetop.jpg);
-    height: 200px;
+    height: 280px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -247,7 +247,7 @@ body {
 /* edit recipes page */
 .edit-recipe-title {
     background-image: url(/static/images/gfreek3.jpg);
-    height: 200px;
+    height: 280px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -257,8 +257,8 @@ body {
 .edit-recipe-title h3 {
     text-align: center;
     position: absolute;
-    top: 68%;
-    left: 20%;
+    top: 60%;
+    left: 75%;
     transform: translate(-50%, -50%);
     color: green;
   }

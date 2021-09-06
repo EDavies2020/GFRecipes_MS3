@@ -56,7 +56,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-sort-numeric-up-alt prefix red-text text-darken-4"></i>
                 <input id="makes" name="makes" value="{{ recipe.makes }}" type="text" class="validate" required>
-                <label for="makes">How many does the recipe make?</label>
+                <label for="makes">Makes</label>
             </div>
         </div>
         <!-- edit author -->
@@ -64,7 +64,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-user prefix red-text text-darken-4"></i>
                 <input id="by" name="by" value="{{ recipe.by }}" type="text" class="validate" required>
-                <label for="by">Author (5-50 characters required)</label>
+                <label for="by">Author</label>
             </div>
         </div>
         <!-- edit prep time -->
@@ -73,7 +73,7 @@
                 <i class="far fa-clock prefix red-text text-darken-4"></i>
                 <input value="{{ recipe.prep_time }}" id="prep_time" name="prep_time" type="text" class="validate"
                     required>
-                <label for="prep_time">How long to prep?</label>
+                <label for="prep_time">Prep Time</label>
             </div>
         </div>
         <!-- edit cooking time -->
@@ -82,7 +82,7 @@
                 <i class="fas fa-temperature-high prefix red-text text-darken-4"></i>
                 <input value="{{ recipe.cooking_time }}" id="cooking_time" name="cooking_time" type="text" class="validate"
                     required>
-                <label for="cooking_time">How long to cook?</label>
+                <label for="cooking_time">Cooking Time</label>
             </div>
         </div>
         <!-- edit ingredients -->
@@ -91,7 +91,7 @@
                 <i class="fas fa-seedling prefix red-text text-darken-4"></i>
                 <textarea id="ingredients" name="ingredients" minlength="20" maxlength="2000"
                 class="materialize-textarea validate" required> {{ recipe.ingredients }} </textarea>
-                <label for="ingredients">Ingredients (20 - 2000 characters, please seperate ingredients with /)</label>
+                <label for="ingredients">Ingredients</label>
             </div>
         </div>
         <!-- edit method -->
@@ -100,7 +100,7 @@
                 <i class="fas fa-list-ol prefix red-text text-darken-4"></i>
                 <textarea id="method" name="method" minlength="20" maxlength="2000"
                     class="materialize-textarea validate" required>{{ recipe.method }}</textarea>
-                <label for="method">Method (20 - 2000 characters. Please provide step by step)</label>
+                <label for="method">Method</label>
             </div>
         </div>
         <!-- edit image -->
@@ -110,7 +110,7 @@
                 <input value="{{ recipe.image }}" id="image" name="image" class="validate" 
                     pattern="http(s?)(:\/\/)((www.)?)(([^.]+)\.)?([a-zA-z0-9\-_]+)(.com|.co.uk|.net|.gov|.org|.in)(\/[^\s]*)?"
                     required>
-                <label class="active" for="image">Provide image url</label>
+                <label class="active" for="image">Image url</label>
             </div>
         </div>
         <!-- submit button -->
