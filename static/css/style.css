@@ -12,7 +12,7 @@ body {
     border-bottom: 3px solid #FA6E00;
 }
 .logo {
-    height: 60px;
+    height: 55px;
     padding-top: 2px;
     padding-bottom: 6px;
 }
@@ -71,19 +71,24 @@ body {
     color: white;
 }
 #monthly-card {
+    background: white;
     border: solid 20px white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-#monthly-card-details h5 {
+#monthly-card img {
+    width: 60%
+}
+#monthly-card h5 {
     padding-bottom: 20px;
     color: darkred;
     font-weight: bold;
     border-bottom: solid 0.5px;
 }
-#monthly-card-details h6 {
+#monthly-card h6 {
     color: blue;
     padding-bottom: 10px;
 }
-#monthly-card-details p {
+#monthly-card p {
     line-height: 20px;
     padding-bottom: 5px;
     padding-top: 5px;
@@ -175,13 +180,10 @@ body {
 }
 /* My account page */
 .account-page {
-    margin-top: 80px;
+    margin-top: 30px;
 }
 .account-page img {
-    float: left;
-    height: 250px;
-    margin-bottom: 30px;
-    padding-left: 20px;
+    width: 50%;
     border-radius: 50%;
 }
 .account-page-intro h6 {
@@ -189,9 +191,6 @@ body {
 }
 .account-page-link-card {
     margin-top: 40px;
-}
-.link-card-details {
-    margin-top: 50px;
 }
 .link-card-details a:hover {
     text-decoration: underline;

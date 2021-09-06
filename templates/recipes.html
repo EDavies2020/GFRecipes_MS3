@@ -20,34 +20,26 @@
   </div>
 </div>
 <!--recipe of the month-->
-<div class="col s12">
-  <div class="card horizontal" id="monthly-card">
-      <div class="card-image">
-          <img src="../static/images/monthlyrecipe.webp" alt="monthly-recipe">
-      </div>
-      <div class="card-stacked">
-          <div class="card-content center-align" id="monthly-card-details">
-              <h5>Our Monthly Favs</h5>
-              <p>Each month we select a recipe to showcase in our 'Monthly Favs' section</p>
-              <p>This month we have chosen a recipe your <br>
-                little ones will LOVE... check out these <i>yummy</i></p>
-              <h6><b>Chocolate Krispy Cakes</b></h6>
-              <p>why not try making them for yourself? <br>
-                the full recipe can be found below</p>
-              <p><b><i>Happy Baking!!</i></b></p>
-          </div>
-      </div>
+<div class="col s12 m10">
+  <div class="center-align" id="monthly-card"> 
+    <h5>Our Monthly Favs</h5>
+    <p>Each month we select a recipe to showcase in our 'Monthly Favs'</p>
+    <p>This month we have chosen a recipe your little ones will LOVE...</p> 
+    <p>Check out these <i><b>yummy</b></i></p>
+    <h6><b>Chocolate Krispy Cakes</b></h6>
+    <img src="../static/images/monthlyrecipe.webp" alt="monthly-recipe">
+    <p>why not try making them for yourself? The full recipe can be found below</p>
   </div>
 </div>
 <!-- search function -->
 <div class="row card-panel">
   <form action="{{ url_for('search') }}" method="POST" class="col s12" id="search-card">
-    <h5 class="center-align red-text text-darken-4">Want to find our Fav? Or just search for your child fav ingredient?</h5>
+    <h5 class="center-align red-text text-darken-4">Want to find our Fav? Or search for your childs favourite food?</h5>
     <div class="row valign-wrapper center-align">
       <div class="input-field col s12 m8">
         <i class="fas fa-search prefix blue-text text-light-blue darken-4"></i>
         <input type="text" name="query" id="query" minlength="3" class="validate" required>
-        <label for="query">Search our Gluten Free recipes</label>
+        <label for="query">Search</label>
       </div>
       <div class="col s12 m4">
         <button type="submit" class="light-blue darken-1 btn text-shadow">Find</button>
