@@ -23,55 +23,64 @@
     </div>
 </div>
 <!--add recipe link card-->
-<div class="col s12">
-    <div class="card center-align">
-        <div class="card-image waves-effect waves-block waves-light">
-            <img src="../static/images/cooking.jpg" alt="cooking">
-        </div>
-    <div class="card-content">
-        <h5 class="name red-text text-darken-4">Add a Recipe</h5>
-        <p>To share your tasty Gluten Free Recipe..</p>
-        <a href="{{ url_for('add_recipe') }}">Click Here</a>
+<div class="row">
+    <div class="col s12">
+        <div class="card center-align">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img src="../static/images/cooking.jpg" alt="cooking">
+            </div>
+            <div class="card-content">
+                <h5 class="name red-text text-darken-4">Add a Recipe</h5>
+                <p>To share your tasty Gluten Free Recipe..</p>
+                <a href="{{ url_for('add_recipe') }}">Click Here</a>
+            </div>
+        </div> 
     </div>
-</div>  
+</div> 
 <!--my recipes link card-->
-<div class="col s12">
-    <div class="card center-align">
-        <div class="card-image waves-effect waves-block waves-light">
-            <img src="../static/images/gfreek13.jpg" alt="food">
+<div class="row">
+    <div class="col s12">
+        <div class="card center-align">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img src="../static/images/gfreek13.jpg" alt="food">
+            </div>
+            <div class="card-content">
+                <h5 class="name red-text text-darken-4">Manage your Recipes</h5>
+                <p>Want to View, Amend or Delete your Recipes?</p>
+                <a href="{{ url_for('my_recipes') }}">Click Here</a>
+            </div>  
         </div>
-    <div class="card-content">
-        <h5 class="name red-text text-darken-4">Manage your Recipes</h5>
-        <p>Want to View, Amend or Delete your Recipes?</p>
-        <a href="{{ url_for('my_recipes') }}">Click Here</a>
     </div>
 </div>  
 <!--delete account card-->
-<div class="col s12">
-    <div class="card center-align" id="account-page-delete-card">
-        <div class="card-image waves-effect waves-block waves-light">
-            <img src="../static/images/leaving.jpg" alt="delete">
+<div class="row">
+    <div class="col s12">
+        <div class="card center-align" id="account-page-delete-card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img src="../static/images/leaving.jpg" alt="delete">
+            </div>
+            <div class="card-content" id="account-delete">
+                <h5 class="name red-text text-darken-4">Delete your Account</h5>
+                <h6>Have you decided you'd like to delete your account?</h6>
+                <h6 class="orange-text"><b>We will be sorry to see you go!</b></h6>
+                <p>However, if you have decided you no longer want your account then please click the link below</p>
+                <p>Please note: Once your account is deleted, your recipes will remain on the website unless you delete them before deleting your account</p>
+                    <!--delete account confirmation modal-->
+                    <a class="modal-trigger" href="#deletemodal">delete account</a>
+                        <div id="deletemodal" class="modal">
+                            <div class="modal-content">
+                                <h5>Are you sure you want to delete your account?</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="{{ url_for('account', username=session['user']) }}" class="modal-close btn-small yellow darken-2"><i
+                                    class="far fa-times-circle left"></i>Cancel</a>
+                                <a href="{{ url_for('delete_account', username=username|lower) }}"
+                                    class=" modal-close btn-small red darken-2"><i class="far fa-trash-alt left"></i>Yes -
+                                    delete permanently</a>
+                            </div>
+                        </div>
+            </div>  
+        </div>
     </div>
-    <div class="card-content" id="account-delete">
-        <h5 class="name red-text text-darken-4">Delete your Account</h5>
-        <h6>Have you decided you'd like to delete your account?</h6>
-        <h6 class="orange-text"><b>We will be sorry to see you go!</b></h6>
-        <p>However, if you have decided you no longer want your account then please click the link below</p>
-        <p>Please note: Once your account is deleted, your recipes will remain on the website unless you delete them before deleting your account</p>
-            <!--delete account confirmation modal-->
-            <a class="modal-trigger" href="#deletemodal">delete account</a>
-                <div id="deletemodal" class="modal">
-                    <div class="modal-content">
-                        <h5>Are you sure you want to delete your account?</h5>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="{{ url_for('account', username=session['user']) }}" class="modal-close btn-small yellow darken-2"><i
-                                class="far fa-times-circle left"></i>Cancel</a>
-                        <a href="{{ url_for('delete_account', username=username|lower) }}"
-                                class=" modal-close btn-small red darken-2"><i class="far fa-trash-alt left"></i>Yes -
-                            delete permanently</a>
-                    </div>
-                </div>
-    </div>  
 </div>
 {% endblock %}

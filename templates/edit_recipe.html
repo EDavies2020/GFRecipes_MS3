@@ -22,7 +22,7 @@
             <div class="input-field col s12">
                 <i class="fas fa-question prefix red-text text-darken-4"></i>
                 <select id="category_name" name="category_name" class="validate" required>
-                    <option selected disable value="">Select Category..</option>
+                    <option value="" disabled selected>Select Category..</option>
                     {% for category in categories %}
                         {% if category.category_name == recipe.category_name %}
                             <option value="{{ category.category_name }}" selected >{{ category.category_name }}</option>
@@ -39,7 +39,7 @@
             <div class="input-field col s12">
                 <i class="far fa-chart-bar prefix red-text text-darken-4"></i>
                 <select id="recipe_difficulty" name="recipe_difficulty" class="validate" required>
-                    <option selected disabled value="">Select Difficulty.. </option>
+                    <option value="" disabled selected>Select Difficulty.. </option>
                     {% for level in levels %}
                         {% if level.recipe_difficulty == level.recipe_difficulty %}
                             <option value="{{ level.recipe_difficulty }}" selected >{{ level.recipe_difficulty }}</option>

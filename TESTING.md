@@ -36,15 +36,23 @@
 # Errors/Warnings HTML <a name="html"></a>
 
 
-I have a number of errors and warnings that I was unable to resolve as they relate directly to the Jinga templating.
+There were a number of issues raised with the html checker.
 
 These include:
 
 ![Image](static/images/testing/htmlcheck.PNG)
 
-The Base template threw up some issues regarding missing/stray tags but having double check I am satisfied that no tags are left open or missing. I believe this is again attributed to Jinga templating.
+The errors and warnings in the reports appeared to be because of using a base template and jinja templating. I  checked with my mentor who said errors needed to be resolved but I struggled to find a way to get around these errors so I decided to run a few pages from the mini project through the html checker to see if the same issues came up to try and work out how to resolve them.
 
-I am satisfied that the only remaining errors/warnings are in connected with Jinga templating so I have left unresolved.
+* HTML check for 'Mini Project' - add task html](static/i
+
+![HTML check for 'Mini Project' - base html](static/images/testing/htmlcheckminiproject1.PNG)
+
+* Mini Project' - add task html
+
+![HTML check for 'Mini Project' - add task html](static/images/testing/htmlcheckminiproject3.PNG)
+
+For this reason I have left these errors/warnings unresolved as I am satisfied that the only remaining errors/warnings are in connected with Jinga templating.
 
 
 [Back to Testing](TESTING.md)
@@ -68,7 +76,13 @@ As this was part of the W3Schools tutorial and it was a warning as opposed to an
 # Errors/Warnings JS Hint <a name="js"></a>
 
 
-This report didn't highlight any errors or warnings to resolve
+My Javascript was free of errors.
+
+I had the following warning:
+
+![Image](static/images/testing/jswarning.PNG)
+
+As this was part of the W3Schools tutorial and it was a warning as opposed to an error I have left this in place.
 
 
 # Errors/Warnings PEP8 <a name="pep8"></a>
