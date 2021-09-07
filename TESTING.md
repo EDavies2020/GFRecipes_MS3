@@ -228,5 +228,6 @@ Desktop:
 * Other
     * Each page has been tested on all screen sizes using online responsive media sites
     * During testing I used the 'back button' regularly and this didnt throw any errors
+    * Each page was tested to make sure the mobile view didnt have any items that didn't show or affected the layout. Numerous changes were made to make sure all text and pictures are visable
 
 [Back to Testing](TESTING.md)
