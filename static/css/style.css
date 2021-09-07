@@ -205,6 +205,9 @@ body {
 #account-delete a:hover {
     text-decoration: underline;
 }
+.modal-footer {
+    margin-bottom: 50px!important;
+}
 /* add recipes page */
 .add-recipe-title {
     background-image: url(/static/images/recipetop.jpg);

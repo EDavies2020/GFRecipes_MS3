@@ -57,12 +57,12 @@
         <h6>Have you decided you'd like to delete your account?</h6>
         <h6 class="orange-text"><b>We will be sorry to see you go!</b></h6>
         <p>However, if you have decided you no longer want your account then please click the link below</p>
+        <p>Please note: Once your account is deleted, your recipes will remain on the website unless you delete them before deleting your account</p>
             <!--delete account confirmation modal-->
             <a class="modal-trigger" href="#deletemodal">delete account</a>
                 <div id="deletemodal" class="modal">
                     <div class="modal-content">
                         <h5>Are you sure you want to delete your account?</h5>
-                        <p>Please note: Once your account is deleted, your recipes will remain on the website unless you delete them before deleting your account</p>
                     </div>
                     <div class="modal-footer">
                         <a href="{{ url_for('account', username=session['user']) }}" class="modal-close btn-small yellow darken-2"><i
