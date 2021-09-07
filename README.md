@@ -77,7 +77,11 @@ Users can register for a free account and then share recipes with other users, t
 # Wireframes <a name="Wireframes"></a>
 
 
-*** to be uploaded ***
+![Wireframe - Account Page](static/images/readme/accountpage.pdf)
+![Wireframe - Add/Edit Recipes Page](static/images/readme/editrecipepages.pdf)
+![Wireframe - Homepage](static/images/readme/homepage.pdf)
+![Wireframe - Register/Login Page](static/images/readme/loginregister.pdf)
+![Wireframe - My Recipes Page](static/images/readme/myrecipespage.pdf)
 
 
 [ Back to Table of Contents](#home)
